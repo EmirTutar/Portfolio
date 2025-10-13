@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "timeline": "Zeitstrahl",
+    "projects": "Projekte",
+    "technologies": "Technologien",
+    "resume": "Lebenslauf",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "Willkommen in meinem Portfolio",
+    "subtitle": "Softwareentwicklung • Testautomatisierung • Embedded & IPC (eCAL)",
+    "highlights": {
+      "projects": "Projekte",
+      "projects_desc": "Ausgewählte Arbeiten aus Studium, Beruf und privaten Projekten.",
+      "testing": "Testautomatisierung",
+      "testing_desc": "Docker & Robot Framework, CI/CD mit GitHub Actions/Jenkins.",
+      "stack": "Tech-Stack",
+      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework und mehr."
+    }
+  },
+  "timeline": {
+    "title": "Ausbildung & Berufserfahrung"
+  },
+  "projects": {
+    "title": "Projekte",
+    "filter": {
+      "all": "Alle",
+      "work": "Arbeit",
+      "study": "Studium",
+      "private": "Privat"
+    }
+  },
+  "technologies": {
+    "title": "Technologien & Skills"
+  },
+  "resume": {
+    "title": "Lebenslauf (PDF)",
+    "hint": "Der Lebenslauf ist direkt eingebettet. Sie können auch herunterladen.",
+    "no_pdf": "Ihr Browser kann das PDF nicht anzeigen.",
+    "download": "hier herunterladen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Sie erreichen mich über folgende Kanäle:"
+  }
+}

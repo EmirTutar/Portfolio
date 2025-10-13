@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "timeline": "Timeline",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome to my portfolio",
+    "subtitle": "Software Engineering • Test Automation • Embedded & IPC (eCAL)",
+    "highlights": {
+      "projects": "Projects",
+      "projects_desc": "Selected work from studies, industry, and private projects.",
+      "testing": "Test Automation",
+      "testing_desc": "Docker & Robot Framework, CI/CD with GitHub Actions/Jenkins.",
+      "stack": "Tech Stack",
+      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework and more."
+    }
+  },
+  "timeline": {
+    "title": "Education & Experience"
+  },
+  "projects": {
+    "title": "Projects",
+    "filter": {
+      "all": "All",
+      "work": "Work",
+      "study": "Study",
+      "private": "Private"
+    }
+  },
+  "technologies": {
+    "title": "Technologies & Skills"
+  },
+  "resume": {
+    "title": "Resume (PDF)",
+    "hint": "The resume is embedded below. You can also download it.",
+    "no_pdf": "Your browser cannot display the PDF.",
+    "download": "download here"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Reach me via:"
+  }
+}

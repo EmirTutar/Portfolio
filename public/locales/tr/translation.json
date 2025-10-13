@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "timeline": "Zaman Çizelgesi",
+    "projects": "Projeler",
+    "technologies": "Teknolojiler",
+    "resume": "Özgeçmiş",
+    "contact": "İletişim"
+  },
+  "home": {
+    "title": "Portföyüme hoş geldiniz",
+    "subtitle": "Yazılım Geliştirme • Test Otomasyonu • Gömülü & IPC (eCAL)",
+    "highlights": {
+      "projects": "Projeler",
+      "projects_desc": "Eğitim, iş ve özel çalışmalardan seçkiler.",
+      "testing": "Test Otomasyonu",
+      "testing_desc": "Docker & Robot Framework, GitHub Actions/Jenkins ile CI/CD.",
+      "stack": "Teknoloji Yığını",
+      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework ve daha fazlası."
+    }
+  },
+  "timeline": {
+    "title": "Eğitim ve İş Deneyimi"
+  },
+  "projects": {
+    "title": "Projeler",
+    "filter": {
+      "all": "Tümü",
+      "work": "İş",
+      "study": "Öğrenim",
+      "private": "Özel"
+    }
+  },
+  "technologies": {
+    "title": "Teknolojiler ve Yetenekler"
+  },
+  "resume": {
+    "title": "Özgeçmiş (PDF)",
+    "hint": "Özgeçmiş aşağıda gömülü. İsterseniz indirebilirsiniz.",
+    "no_pdf": "Tarayıcınız PDF'i görüntüleyemiyor.",
+    "download": "buradan indir"
+  },
+  "contact": {
+    "title": "İletişim",
+    "intro": "Bana şu kanallardan ulaşabilirsiniz:"
+  }
+}

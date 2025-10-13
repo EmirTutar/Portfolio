@@ -1,0 +1,55 @@
+/* Simple layout helpers for dark portfolio */
+.container { max-width: 1120px; margin: 0 auto; padding: 1.25rem; }
+.grid { display: grid; gap: 1rem; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.24);
+}
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  margin-right: 0.4rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+.section-title {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  letter-spacing: .3px;
+}
+.muted { color: var(--muted); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--elev);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .6rem .9rem;
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--primary); }
+.toolbar { display: flex; gap: .75rem; align-items: center; }
+nav.site {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(11,14,20,.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; }
+.nav-links { display: flex; gap: 1rem; }
+.nav-links a { padding: .6rem .75rem; border-radius: 8px; }
+.nav-links a.active { background: var(--elev); }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
