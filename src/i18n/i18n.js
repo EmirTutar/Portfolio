@@ -8,13 +8,17 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'de',
+    fallbackLng: 'en',                 // <- Standard: Englisch
     supportedLngs: ['de', 'en', 'tr'],
     interpolation: { escapeValue: false },
     backend: {
-      // Adjust base path if your repo is a project page like /<REPO_NAME>/
-      //loadPath: '/locales/{{lng}}/{{ns}}.json'
       loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`
+    },
+    detection: {
+      order: ['localStorage', 'querystring', 'navigator'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+      lookupQuerystring: 'lng'
     }
   })
 

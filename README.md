@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-# Emircan - Portfolio Website
-=======
 # Emircan Tutar — Portfolio (React + Vite)
 
-Mehrsprachige Portfolio-Seite (DE/EN/TR) mit Dark Theme, React Router, i18n und PDF-Embed.
+Multilingual (EN/DE/TR) React portfolio with dark theme, routing, i18n, and embedded PDF résumé. Ready for GitHub Pages.
 
-## Quickstart
+## Quick Start
 ```bash
 npm install
-npm run dev
+npm run dev   # http://localhost:5173
 ```
-
-Öffne `http://localhost:5173` im Browser.
 
 ## Build
 ```bash
@@ -19,19 +14,33 @@ npm run build
 npm run preview
 ```
 
-## GitHub Pages Deployment (via Actions)
-1. Repository auf GitHub erstellen und Code pushen.
-2. In GitHub: **Settings → Pages → Source = GitHub Actions**.
-3. Workflow-Datei `.github/workflows/deploy.yml` ist bereits enthalten.
+## GitHub Pages
+1. In `vite.config.js` set:
+   ```js
+   import { defineConfig } from 'vite'
+   import react from '@vitejs/plugin-react'
 
-**Hinweis zu Routing:** In Produktion wird `HashRouter` verwendet (`/#/route`), damit GitHub Pages ohne 404 direkt auf Unterseiten funktioniert.
+   export default defineConfig({
+     plugins: [react()],
+     base: '/REPO_NAME/'   // your repo name (case-sensitive)
+   })
+   ```
+2. Use Vite base URL for runtime assets:
+   - `src/i18n/i18n.js`:
+     ```js
+     backend: { loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json` }
+     ```
+   - `src/pages/Resume.jsx`:
+     ```jsx
+     const pdf = `${import.meta.env.BASE_URL}EmircanTutar_CV.pdf`
+     ```
+3. Push to GitHub → **Settings → Pages → Source: GitHub Actions**  
+   Workflow: `.github/workflows/deploy.yml`.
 
-## Inhalte pflegen
-- **Timeline:** `src/data/timeline.js`
-- **Projekte:** `src/data/projects.js`
-- **Technologien:** `src/data/technologies.js`
-- **Übersetzungen:** `public/locales/{de|en|tr}/translation.json`
-- **CV (PDF):** `public/EmircanTutar_CV.pdf` (kann ersetzt/aktualisiert werden)
+## Edit Content
+- Timeline: `src/data/timeline.js`  
+- Projects: `src/data/projects.js`  
+- Technologies: `src/data/technologies.js`  
+- Translations: `public/locales/{en|de|tr}/translation.json`  
+- Résumé (PDF): `public/EmircanTutar_CV.pdf`
 
-Viel Erfolg!
->>>>>>> 59b3b6d (Prepare for GitHub Pages (vite base + relative asset paths))
