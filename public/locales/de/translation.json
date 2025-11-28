@@ -7,18 +7,18 @@
     "resume": "Lebenslauf",
     "contact": "Kontakt"
   },
-  "home": {
-    "title": "Willkommen in meinem Portfolio",
-    "subtitle": "Softwareentwicklung • Testautomatisierung • Embedded & IPC (eCAL)",
-    "highlights": {
-      "projects": "Projekte",
-      "projects_desc": "Ausgewählte Arbeiten aus Studium, Beruf und privaten Projekten.",
-      "testing": "Testautomatisierung",
-      "testing_desc": "Docker & Robot Framework, CI/CD mit GitHub Actions/Jenkins.",
-      "stack": "Tech-Stack",
-      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework und mehr."
-    }
-  },
+"home": {
+  "title": "Willkommen in meinem Portfolio",
+  "subtitle": "Softwareentwicklung, Testautomatisierung und vielseitige Softwareprojekte",
+  "highlights": {
+    "projects": "Projekte",
+    "projects_desc": "Ausgewählte Arbeiten aus Studium, Beruf und privaten Projekten – von Android-Apps und Webanwendungen bis hin zu Robotik- und Game-Prototypen.",
+    "testing": "Softwarequalität & Tests",
+    "testing_desc": "Erfahrungen mit automatisierten Tests, Containerisierung und CI/CD-Pipelines, unter anderem mit Docker, Robot Framework und GitHub Actions.",
+    "stack": "Technologie-Stack",
+    "stack_desc": "Praxis in C/C++, Java, Python, modernen Webtechnologien (React, Vue.js) sowie Tools wie Docker, ROS und gängigen Entwickler-Toolchains."
+  }
+},
   "timeline": {
     "title": "Ausbildung & Berufserfahrung"
   },

@@ -9,14 +9,14 @@
   },
   "home": {
     "title": "Welcome to my portfolio",
-    "subtitle": "Software Engineering • Test Automation • Embedded & IPC (eCAL)",
+    "subtitle": "Software development, test automation and diverse software projects",
     "highlights": {
       "projects": "Projects",
-      "projects_desc": "Selected work from studies, industry, and private projects.",
-      "testing": "Test Automation",
-      "testing_desc": "Docker & Robot Framework, CI/CD with GitHub Actions/Jenkins.",
-      "stack": "Tech Stack",
-      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework and more."
+      "projects_desc": "Selected work from studies, industry and private projects – from Android apps and web applications to robotics and game prototypes.",
+      "testing": "Software quality & testing",
+      "testing_desc": "Experience with automated testing, containerization and CI/CD pipelines using tools such as Docker, Robot Framework and GitHub Actions.",
+      "stack": "Technology stack",
+      "stack_desc": "Hands-on experience with C/C++, Java, Python, modern web technologies (React, Vue.js) as well as tools like Docker, ROS and common developer toolchains."
     }
   },
   "timeline": {

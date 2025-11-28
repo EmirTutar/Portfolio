@@ -9,14 +9,14 @@
   },
   "home": {
     "title": "Portföyüme hoş geldiniz",
-    "subtitle": "Yazılım Geliştirme • Test Otomasyonu • Gömülü & IPC (eCAL)",
+    "subtitle": "Yazılım geliştirme, test otomasyonu ve çeşitli yazılım projeleri",
     "highlights": {
       "projects": "Projeler",
-      "projects_desc": "Eğitim, iş ve özel çalışmalardan seçkiler.",
-      "testing": "Test Otomasyonu",
-      "testing_desc": "Docker & Robot Framework, GitHub Actions/Jenkins ile CI/CD.",
-      "stack": "Teknoloji Yığını",
-      "stack_desc": "C/C++, Python, React, eCAL, Docker, Robot Framework ve daha fazlası."
+      "projects_desc": "Lisans eğitimi, iş ve kişisel çalışmalardan seçilen projeler – Android uygulamalarından ve web projelerinden robotik ve oyun prototiplerine kadar.",
+      "testing": "Yazılım kalitesi ve test",
+      "testing_desc": "Otomatik testler, konteynerleştirme ve CI/CD hatları konusunda deneyim; özellikle Docker, Robot Framework ve GitHub Actions gibi araçlarla.",
+      "stack": "Teknoloji yığını",
+      "stack_desc": "C/C++, Java, Python, modern web teknolojileri (React, Vue.js) ve Docker, ROS gibi araçlar ile yaygın geliştirici toolchain’lerinde pratik deneyim."
     }
   },
   "timeline": {

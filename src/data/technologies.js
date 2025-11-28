@@ -1,19 +1,36 @@
 const technologies = [
   {
-    group: "Sprachen",
-    items: ["Java", "Python", "C#", "C", "C++", "SQL", "Assembler", "PHP", "JavaScript", "HTML", "CSS"]
+    group: "Programmiersprachen – Fortgeschritten",
+    items: ["C", "C++", "Java", "Python"]
   },
   {
-    group: "Tools & Frameworks",
-    items: ["Visual Studio", "CMake", "Maven", "Docker", "Robot Framework", "ROS", "eCAL",
-            "Microsoft Azure", "Kubernetes", "Jenkins", "Azure DevOps", "Jira",
-            "React", "Node.js", "Vue.js", "Oracle SQL Developer", "Android Studio",
-            "Git", "VS Code", "PyCharm", "IntelliJ", "CLion", "MS Office"]
+    group: "Programmiersprachen – Gute Kenntnisse",
+    items: ["C#", "SQL", "JavaScript"]
   },
   {
-    group: "Sprachen (natürlich)",
-    items: ["Deutsch", "Englisch", "Türkisch"]
-  }
+    group: "Programmiersprachen – Grundlagen",
+    items: ["PHP", "Assembler", "HTML", "CSS"]
+  },
+  {
+    group: "Frameworks & Libraries",
+    items: ["React", "Vue.js", "Node.js", "ROS", "eCAL", "Robot Framework"]
+  },
+  {
+    group: "DevOps, Cloud & CI",
+    items: ["Docker", "Kubernetes", "Jenkins", "Azure DevOps", "Microsoft Azure"]
+  },
+  {
+    group: "Build- & Projekt-Tools",
+    items: ["CMake", "Maven", "Git", "Jira"]
+  },
+  {
+    group: "Datenbanken & Tools",
+    items: ["Oracle SQL Developer"]
+  },
+  {
+    group: "IDEs & Editoren",
+    items: ["Visual Studio", "VS Code", "CLion", "IntelliJ", "PyCharm", "Android Studio"]
+  },
 ]
 
 export default technologies
