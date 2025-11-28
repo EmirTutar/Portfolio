@@ -10,8 +10,9 @@ import Contact from './pages/Contact.jsx'
 
 export default function App() {
   return (
-    <div>
+    <div className="app-shell">
       <Navbar />
+
       <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+
       <Footer />
     </div>
   )
