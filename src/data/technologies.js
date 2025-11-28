@@ -12,7 +12,7 @@ const technologies = [
   },
   {
     group: "Sprachen (natürlich)",
-    items: ["Deutsch", "Englisch", "Italienisch", "Türkisch"]
+    items: ["Deutsch", "Englisch", "Türkisch"]
   }
 ]
 
