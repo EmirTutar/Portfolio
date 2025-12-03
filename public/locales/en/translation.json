@@ -24,6 +24,7 @@
   },
   "projects": {
     "title": "Projects",
+    "subtitle": "Selected projects from work, university and personal initiatives.",
     "filter": {
       "all": "All",
       "work": "Work",

@@ -101,8 +101,8 @@ export default function ProjectDetail() {
             <>
               <h3 style={{ marginTop: '1.2rem' }}>Schwerpunkte</h3>
               <p className="muted">
-                Für dieses Projekt kannst du hier Ziele, Architektur, Herausforderungen und deine Rolle im
-                Detail beschreiben.
+                Hier sind einige weiterführende Informationen zum Projekt, seinen Zielen,
+                Herausforderungen und Ergebnissen.
               </p>
             </>
           )}
@@ -121,55 +121,93 @@ export default function ProjectDetail() {
         <aside className="card">
           <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Screenshots & Dokumentation</h2>
           <p className="muted" style={{ marginBottom: '0.75rem' }}>
-            Hier kannst du Screenshots, Ablaufdiagramme oder Links zu Dokumenten einfügen.
+            Hier sind einige Screenshots und gegebenenfalls weiterführende Projektunterlagen zu finden.
           </p>
 
           {isRateMe && (
             <>
-              <div className="project-images-placeholder">
-                <div className="project-image-slot">Login / Signup</div>
-                <div className="project-image-slot">Barcode-Scan & Produktansicht</div>
-                <div className="project-image-slot">History & Favourites</div>
-                <div className="project-image-slot">Settings / About us</div>
-              </div>
+            <div className="project-images-placeholder">
+                <div className="project-image-slot">
+                    <video
+                    src={`${base}rateme/rateme-login.mp4`}
+                    controls
+                    muted
+                    playsInline
+                    style={{ width: '100%', borderRadius: '0.5rem' }}
+                    >
+                    Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                    <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                    Login / Signup
+                    </p>
+                </div>
 
-              <h3 style={{ marginTop: '1rem', marginBottom: '.4rem' }}>Projektunterlagen</h3>
-              <ul className="muted" style={{ paddingLeft: '1.1rem', margin: 0 }}>
+                <div className="project-image-slot">
+                    <video
+                    src={`${base}rateme/rateme-scan.mp4`}
+                    controls
+                    muted
+                    playsInline
+                    style={{ width: '100%', borderRadius: '0.5rem' }}
+                    >
+                    Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                    <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                    Barcode-Scan & Produktansicht
+                    </p>
+                </div>
+
+                <div className="project-image-slot">
+                    <video
+                    src={`${base}rateme/rateme-history.mp4`}
+                    controls
+                    muted
+                    playsInline
+                    style={{ width: '100%', borderRadius: '0.5rem' }}
+                    >
+                    Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                    <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                    History & Favourites
+                    </p>
+                </div>
+
+                <div className="project-image-slot">
+                    <video
+                    src={`${base}rateme/rateme-settings.mp4`}
+                    controls
+                    muted
+                    playsInline
+                    style={{ width: '100%', borderRadius: '0.5rem' }}
+                    >
+                    Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                    <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                    Settings / About us
+                    </p>
+                </div>
+                </div>
+
+                <h3 style={{ marginTop: '1rem', marginBottom: '.4rem' }}>Projektunterlagen</h3>
+                <ul className="muted" style={{ paddingLeft: '1.1rem', margin: 0 }}>
                 <li>
-                  <a
-                    href={`${base}rateme/RateMe_Presentation.pptx`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                    <a href={`${base}rateme/RateMe_Presentation.pptx`} target="_blank" rel="noreferrer">
                     Projektpräsentation (PPTX)
-                  </a>
+                    </a>
                 </li>
                 <li>
-                  <a
-                    href={`${base}rateme/RateMe_Report.pdf`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                    <a href={`${base}rateme/RateMe_Report.pdf`} target="_blank" rel="noreferrer">
                     Projektdokumentation (PDF)
-                  </a>
+                    </a>
                 </li>
                 <li>
-                  <a
-                    href={`${base}rateme/RateMe_Description.pdf`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                    <a href={`${base}rateme/RateMe_Description.pdf`} target="_blank" rel="noreferrer">
                     Funktions- & Feature-Beschreibung (PDF)
-                  </a>
+                    </a>
                 </li>
-              </ul>
-
-              <p className="muted" style={{ marginTop: '0.75rem' }}>
-                Lege die Dateien unter <code>public/rateme/</code> im Projekt ab und passe die Dateinamen
-                bei Bedarf an.
-              </p>
+                </ul>
             </>
-          )}
+            )}
 
           {!isRateMe && (
             <div className="project-images-placeholder">

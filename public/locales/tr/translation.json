@@ -24,6 +24,7 @@
   },
   "projects": {
     "title": "Projeler",
+    "subtitle": "İş, üniversite ve kişisel projelerden seçilmiş çalışmalar.",
     "filter": {
       "all": "Tümü",
       "work": "İş",

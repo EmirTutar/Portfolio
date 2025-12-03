@@ -24,14 +24,14 @@ const projects = [
     }
   },
   {
-    id: "rateme-android",
-    title: "RateMe – Product Rating App",
+    id: "rateme",
+    title: "RateMe – Android Produktbewertungs-App",
     category: "study",
     description:
-      "Android app for scanning products via barcode, rating them and managing favourites with Firebase-backed authentication and storage.",
+      "Android-App zum Scannen von Barcodes, Anzeigen von Produktinfos und Speichern von Bewertungen in Firebase.",
     technologies: ["Android", "Java", "Firebase Auth", "Firestore", "REST-API"],
     links: {
-      github: "https://github.com/EmirTutar/RateMe_AndroidApp",
+      github: null,
       demo: null
     }
   },

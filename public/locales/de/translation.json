@@ -24,6 +24,7 @@
   },
   "projects": {
     "title": "Projekte",
+    "subtitle": "Ausgewählte Projekte aus Studium, Beruf und privaten Initiativen.",
     "filter": {
       "all": "Alle",
       "work": "Arbeit",
