@@ -5,7 +5,7 @@ const projects = [
     category: "work", // 'work' | 'study' | 'private'
     description:
       "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI).",
-    technologies: ["C++", "Docker", "Robot Framework", "eCAL", "GitHub Actions"],
+    technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages"],
     links: {
       github: "https://github.com/EmirTutar/bachelor-thesis-ipc-testing",
       demo: null
