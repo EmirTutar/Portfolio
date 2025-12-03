@@ -362,3 +362,53 @@ a:hover {
 .mt-lg {
   margin-top: 2rem;
 }
+
+/* Detailseite Layout */
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-detail-tags {
+  max-width: 320px;
+  text-align: right;
+}
+
+.project-detail-body {
+  align-items: stretch;
+}
+
+.project-images-placeholder {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.project-image-slot {
+  border-radius: 0.7rem;
+  border: 1px dashed var(--border);
+  padding: 1.5rem 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Karten in der Projektübersicht etwas "klickbarer" machen */
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.project-card:hover {
+  text-decoration: none;
+}

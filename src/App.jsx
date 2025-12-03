@@ -7,6 +7,7 @@ import Projects from './pages/Projects.jsx'
 import Technologies from './pages/Technologies.jsx'
 import Resume from './pages/Resume.jsx'
 import Contact from './pages/Contact.jsx'
+import ProjectDetail from './pages/ProjectDetail.jsx'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} /> {/* NEU */}
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />

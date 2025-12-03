@@ -29,7 +29,7 @@ const projects = [
     category: "study",
     description:
       "Android app for scanning products via barcode, rating them and managing favourites with Firebase-backed authentication and storage.",
-    technologies: ["Java", "Android Studio", "Firebase"],
+    technologies: ["Android", "Java", "Firebase Auth", "Firestore", "REST-API"],
     links: {
       github: "https://github.com/EmirTutar/RateMe_AndroidApp",
       demo: null

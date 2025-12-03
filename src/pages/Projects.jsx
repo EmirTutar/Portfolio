@@ -1,46 +1,64 @@
-import { useMemo, useState } from 'react'
-import projects from '../data/projects.js'
+// src/pages/Projects.jsx
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const categories = [
-  { key:'all', labelKey:'projects.filter.all' },
-  { key:'work', labelKey:'projects.filter.work' },
-  { key:'study', labelKey:'projects.filter.study' },
-  { key:'private', labelKey:'projects.filter.private' },
-]
+import { Link } from 'react-router-dom'
+import projects from '../data/projects'
 
 export default function Projects() {
   const { t } = useTranslation()
-  const [cat, setCat] = useState('all')
+  const [filter, setFilter] = useState('all')
 
-  const filtered = useMemo(() => {
-    if (cat === 'all') return projects
-    return projects.filter(p => p.category === cat)
-  }, [cat])
+  const filtered = projects.filter(p => (filter === 'all' ? true : p.category === filter))
 
   return (
     <section>
       <h1 className="section-title">{t('projects.title')}</h1>
-      <div className="toolbar" style={{marginBottom:'1rem'}}>
-        {categories.map(c => (
-          <button key={c.key} className="btn" onClick={() => setCat(c.key)}>
-            {t(c.labelKey)}
-          </button>
-        ))}
+      <p className="muted" style={{ marginBottom: '1rem' }}>
+        {t('projects.subtitle') || 'Ausgewählte Projekte aus Studium, Beruf und privaten Initiativen.'}
+      </p>
+
+      <div className="toolbar" style={{ marginBottom: '1rem' }}>
+        <button className="btn btn--ghost" onClick={() => setFilter('all')}>
+          {t('projects.filter.all')}
+        </button>
+        <button className="btn btn--ghost" onClick={() => setFilter('work')}>
+          {t('projects.filter.work')}
+        </button>
+        <button className="btn btn--ghost" onClick={() => setFilter('study')}>
+          {t('projects.filter.study')}
+        </button>
+        <button className="btn btn--ghost" onClick={() => setFilter('private')}>
+          {t('projects.filter.private')}
+        </button>
       </div>
-      <div className="grid grid-2">
-        {filtered.map(p => (
-          <div className="card" key={p.id}>
-            <h3>{p.title}</h3>
-            <p className="muted">{p.description}</p>
-            <div style={{margin:'0.5rem 0'}}>
-              {p.technologies.map((t,i) => <span className="tag" key={i}>{t}</span>)}
+
+      <div className="grid grid-2 grid-projects">
+        {filtered.map(project => (
+          <Link
+            key={project.id}
+            to={`/projects/${project.id}`}
+            className="card project-card"
+          >
+            <h2 style={{ marginTop: 0, marginBottom: '.4rem' }}>{project.title}</h2>
+            <p className="muted" style={{ marginBottom: '.6rem' }}>
+              {project.description}
+            </p>
+            <div style={{ marginBottom: '.6rem' }}>
+              {project.technologies?.slice(0, 5).map(tech => (
+                <span key={tech} className="tag">
+                  {tech}
+                </span>
+              ))}
+              {project.technologies?.length > 5 && (
+                <span className="tag">+{project.technologies.length - 5}</span>
+              )}
             </div>
-            <div className="toolbar">
-              {p.links.github && <a className="btn" href={p.links.github} target="_blank" rel="noreferrer">GitHub</a>}
-              {p.links.demo && <a className="btn" href={p.links.demo} target="_blank" rel="noreferrer">Demo</a>}
-            </div>
-          </div>
+            <p className="muted" style={{ fontSize: '.85rem' }}>
+              {project.category === 'work' && 'Berufliches Projekt'}
+              {project.category === 'study' && 'Projekt im Studium'}
+              {project.category === 'private' && 'Privates Projekt'}
+            </p>
+          </Link>
         ))}
       </div>
     </section>
