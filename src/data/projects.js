@@ -6,7 +6,7 @@ const projects = [
     Effort: 5,
     description:
       "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI).",
-    technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages"],
+    technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages", "LaTeX"],
     links: {
       github: "https://github.com/EmirTutar/bachelor-thesis-ipc-testing",
       demo: null
@@ -45,14 +45,14 @@ const projects = [
     Effort: 2,
     description:
       "Web app that combines event planning with live weather data to support outdoor activities and avoid bad-weather appointments.",
-technologies: ["Vue.js", "JavaScript", "CSS", "HTML","OpenWeatherMap API"],
+    technologies: ["Vue.js", "JavaScript", "CSS", "HTML", "API"],
     links: {
       github: "https://github.com/EmirTutar/wetterapp",
       demo: "https://outdoorplaner.netlify.app/"
     }
   },
   {
-    id: "turtlebot-driving",
+    id: "turtlebot_driving",
     title: "Autonomous Turtlebot Navigation",
     category: "study",
     Effort: 5,
@@ -69,11 +69,28 @@ technologies: ["Vue.js", "JavaScript", "CSS", "HTML","OpenWeatherMap API"],
     title: "Patient Monitoring Prototype",
     category: "study",
     Effort: 5,
-    description:
-      "Prototype system for monitoring patients and visualising medical data, developed as part of a university project.",
-    technologies: ["Java", "SQL"],
+    description: 'Kamera-basiertes Fall- und Bett-Monitoring mit Docker, MQTT und Raspberry Pi.',
+    technologies: ['Docker', 'Raspberry Pi', 'YOLOv5', 'MQTT', 'Matrix', 'Python'],
     links: {
       github: "https://github.com/EmirTutar/Patientenmonitoring",
+      demo: null
+    }
+  },
+
+  {
+    id: 'systemsicherheit-labs',
+    title: 'System Security – Practical Labs',
+    category: 'study',
+    Effort: 4,
+    description:
+      'Praktische Übungen zu Angriffsvektoren und Abwehrmaßnahmen: von OSINT und Port-Scanning über Web-Schwachstellen bis hin zu CMS- und Netzwerkangriffen.',
+    technologies: [
+      'Linux',
+      'Wireshark',
+      'Bash'
+    ],
+    links: {
+      github: null,
       demo: null
     }
   },
@@ -95,13 +112,13 @@ technologies: ["Vue.js", "JavaScript", "CSS", "HTML","OpenWeatherMap API"],
   },
 
   {
-    id: "ai-java-tests",
+    id: "java-testing",
     title: "AI-Assisted Java Software Testing",
     category: "study",
     Effort: 4,
     description:
       "Project work on using ChatGPT to generate software tests for Java projects and evaluating the quality and efficiency of the generated tests.",
-    technologies: ["LaTeX", "Java", "Software Testing", "ChatGPT"],
+    technologies: ["Java", "Maven", "Software Testing", "LaTeX", "ChatGPT"],
     links: {
       github: "https://github.com/EmirTutar/PA_KI_Softwaretests_Java",
       demo: null
@@ -115,7 +132,7 @@ technologies: ["Vue.js", "JavaScript", "CSS", "HTML","OpenWeatherMap API"],
     Effort: 4,
     description:
       "C# game prototype exploring radar-style visuals, rendering and basic game engine structures.",
-    technologies: ["C#", "GLSL"],
+    technologies: ["C#", "GLSL", "Shader Programming"],
     links: {
       github: "https://github.com/EmirTutar/RadarGame",
       demo: null
