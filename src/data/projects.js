@@ -3,6 +3,7 @@ const projects = [
     id: "ecal-test-suite",
     title: "eCAL Test Suite – IPC Integration Testing",
     category: "work", // 'work' | 'study' | 'private'
+    Effort: 5,
     description:
       "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI).",
     technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages"],
@@ -12,12 +13,13 @@ const projects = [
     }
   },
   {
-    id: "portfolio-site",
+    id: "personal-site",
     title: "Personal Portfolio Website",
     category: "private",
+    Effort: 5,
     description:
       "Multilingual developer portfolio (EN/DE/TR) with dark theme, routing, i18n and embedded PDF résumé, deployed via GitHub Pages.",
-    technologies: ["React", "Vite", "i18next", "React Router"],
+    technologies: ["React", "JavaScript", "CSS", "HTML", "Vite", "i18next"],
     links: {
       github: "https://github.com/EmirTutar/Portfolio",
       demo: "https://emirtutar.github.io/Portfolio/"
@@ -27,11 +29,12 @@ const projects = [
     id: "rateme",
     title: "RateMe – Android Produktbewertungs-App",
     category: "study",
+    Effort: 4,
     description:
       "Android-App zum Scannen von Barcodes, Anzeigen von Produktinfos und Speichern von Bewertungen in Firebase.",
     technologies: ["Android", "Java", "Firebase Auth", "Firestore", "REST-API"],
     links: {
-      github: null,
+      github: "https://github.com/EmirTutar/RateMe_AndroidApp",
       demo: null
     }
   },
@@ -39,18 +42,20 @@ const projects = [
     id: "outdoor-planner",
     title: "Outdoor Planner – Weather-Aware Scheduler",
     category: "study",
+    Effort: 2,
     description:
       "Web app that combines event planning with live weather data to support outdoor activities and avoid bad-weather appointments.",
-    technologies: ["Vue.js", "JavaScript"],
+technologies: ["Vue.js", "JavaScript", "CSS", "HTML","OpenWeatherMap API"],
     links: {
       github: "https://github.com/EmirTutar/wetterapp",
-      demo: null
+      demo: "https://outdoorplaner.netlify.app/"
     }
   },
   {
     id: "turtlebot-driving",
     title: "Autonomous Turtlebot Navigation",
     category: "study",
+    Effort: 5,
     description:
       "ROS project enabling a mobile robot to autonomously navigate to predefined goals using navigation stack and costmaps.",
     technologies: ["ROS", "Python", "CMake"],
@@ -63,6 +68,7 @@ const projects = [
     id: "patient-monitoring",
     title: "Patient Monitoring Prototype",
     category: "study",
+    Effort: 5,
     description:
       "Prototype system for monitoring patients and visualising medical data, developed as part of a university project.",
     technologies: ["Java", "SQL"],
@@ -76,6 +82,7 @@ const projects = [
     id: "mission-fried-chicken",
     title: "Mission Fried Chicken",
     category: "study",
+    Effort: 3,
     description:
       "Game project developed during studies; small gameplay prototype focused on experimenting with game mechanics and implementation.",
     technologies: [
@@ -91,6 +98,7 @@ const projects = [
     id: "ai-java-tests",
     title: "AI-Assisted Java Software Testing",
     category: "study",
+    Effort: 4,
     description:
       "Project work on using ChatGPT to generate software tests for Java projects and evaluating the quality and efficiency of the generated tests.",
     technologies: ["LaTeX", "Java", "Software Testing", "ChatGPT"],
@@ -104,6 +112,7 @@ const projects = [
     id: "radar-game",
     title: "RadarGame – C# Game Prototype",
     category: "study",
+    Effort: 4,
     description:
       "C# game prototype exploring radar-style visuals, rendering and basic game engine structures.",
     technologies: ["C#", "GLSL"],

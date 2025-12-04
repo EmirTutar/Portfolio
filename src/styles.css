@@ -435,3 +435,28 @@ a:hover {
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
+
+.Effort {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.Effort-label {
+  color: var(--muted);
+}
+
+.star {
+  font-size: 0.85rem;
+}
+
+.star-fill {
+  color: #facc15; /* gelb */
+}
+
+.star-empty {
+  color: #4b5563; /* gedämpftes Grau */
+  opacity: 0.5;
+}

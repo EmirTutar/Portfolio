@@ -215,38 +215,106 @@ export default function ProjectDetail() {
     )
   }
 
-  const isRateMe = project.id === 'rateme'
-  return (
-    <section className="project-detail">
-      <header className="project-detail-header card">
-        <div>
-          <h1 className="section-title">{project.title}</h1>
-          <p className="muted">
-            {project.category === 'work' && 'Berufliches Projekt'}
-            {project.category === 'study' && 'Projekt im Studium'}
-            {project.category === 'private' && 'Privates Projekt'}
-          </p>
-        </div>
-        <div className="project-detail-tags">
-          {project.technologies?.map(tech => (
-            <span key={tech} className="tag">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </header>
+    // Spezielle Detailansicht: Persönliche Portfolio-Webseite
+  if (project.id === 'personal-site') {
+    return (
+      <section className="project-detail">
+        <header className="project-detail-header card">
+          <div>
+            <h1 className="section-title">{project.title}</h1>
+            <p className="muted">
+              Mehrsprachige Portfolio-Webseite mit Dark Theme, Projektübersicht,
+              Zeitstrahl, Tech-Stack und eingebettetem CV – bereitgestellt über GitHub Pages.
+            </p>
+          </div>
+          <div className="project-detail-tags">
+            {project.technologies?.map(tech => (
+              <span key={tech} className="tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </header>
 
-      <div className="grid grid-2 project-detail-body">
-        {/* linke Spalte: Text / Beschreibung */}
-        <article className="card">
-          <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Kurzbeschreibung</h2>
-          <p className="muted" style={{ marginBottom: '1rem' }}>
-            {project.description}
-          </p>
+        <div className="grid grid-2 project-detail-body" style={{ marginBottom: '1.5rem' }}>
+          <article className="card">
+            <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Projektüberblick</h2>
+            <p className="muted">
+              Dieses Portfolio dient als zentrale Anlaufstelle für meine Projekte, meinen Werdegang
+              und meinen Tech-Stack. Die Seite ist in Deutsch, Englisch und Türkisch verfügbar und
+              nutzt ein modernes Dark Theme mit React, Vite und i18next.
+            </p>
+            <ul className="muted" style={{ paddingLeft: '1.1rem', marginTop: '.75rem' }}>
+              <li>Mehrsprachige Oberfläche (DE/EN/TR) mit i18next</li>
+              <li>Seiten für Zeitstrahl, Projekte, Technologien, Lebenslauf und Kontakt</li>
+              <li>PDF-Einbettung für den Lebenslauf direkt im Browser</li>
+              <li>Deployment über GitHub Pages und automatisierten Build</li>
+            </ul>
+          </article>
 
-          {isRateMe ? (
-            <>
-              <h3 style={{ marginTop: '1.2rem' }}>Aufbau der App</h3>
+          <aside className="card">
+            <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Links & Stack</h2>
+            <p className="muted" style={{ marginBottom: '.75rem' }}>
+              Die Seite ist als React-Single-Page-Application aufgebaut und wird mit Vite gebündelt.
+            </p>
+            <p className="muted" style={{ marginBottom: '.5rem' }}>
+              <strong>Haupttechnologien:</strong> React, Vite, React Router, i18next, CSS
+            </p>
+            <ul className="muted" style={{ paddingLeft: '1.1rem' }}>
+              <li>
+                GitHub-Repository:{' '}
+                <a
+                  href="https://github.com/EmirTutar/Portfolio"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  github.com/EmirTutar/Portfolio
+                </a>
+              </li>
+              <li>
+                Live (GitHub Pages):{' '}
+                <a
+                  href="https://emirtutar.github.io/Portfolio/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  emirtutar.github.io/Portfolio
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <div style={{ marginTop: '1.5rem' }}>
+          <Link to="/projects" className="btn">
+            ← Zur Projektübersicht
+          </Link>
+        </div>
+      </section>
+    )
+  }
+
+if (project.id === 'rateme') {
+    return (
+      <section className="project-detail">
+        <header className="project-detail-header card">
+          <div>
+            <h1 className="section-title">{project.title}</h1>
+            <p className="muted">Projekt im Studium – Android Bewertungs-App.</p>
+          </div>
+          <div className="project-detail-tags">
+            {project.technologies?.map(tech => (
+              <span key={tech} className="tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </header>
+
+        <div className="grid grid-2 project-detail-body">
+          {/* linke Spalte: Text */}
+          <article className="card">
+             <h3 style={{ marginTop: '1.2rem' }}>Aufbau der App</h3>
               <p className="muted">
                 Die RateMe App ist eine benutzerfreundliche Plattform, mit der Nutzer Produkte bewerten
                 und im Blick behalten können. Die Anmeldung erfolgt über eine E-Mail-Verifizierung, um die
@@ -289,135 +357,255 @@ export default function ProjectDetail() {
                 kompakte Informationen zu Produkten und unterstützt Nutzer dabei, ihre
                 Einkaufserfahrungen besser zu organisieren und zu optimieren.
               </p>
-            </>
-          ) : (
-            <>
-              <h3 style={{ marginTop: '1.2rem' }}>Schwerpunkte</h3>
-              <p className="muted">
-                Hier sind einige weiterführende Informationen zum Projekt, seinen Zielen,
-                Herausforderungen und Ergebnissen.
+
+            {project.links?.github && (
+              <p style={{ marginTop: '1.2rem' }}>
+                <strong>GitHub:&nbsp;</strong>
+                <a href={project.links.github} target="_blank" rel="noreferrer">
+                  {project.links.github}
+                </a>
               </p>
-            </>
-          )}
+            )}
+          </article>
 
-          {project.links?.github && (
-            <p style={{ marginTop: '1.2rem' }}>
-              <strong>GitHub:&nbsp;</strong>
-              <a href={project.links.github} target="_blank" rel="noreferrer">
-                {project.links.github}
-              </a>
+          {/* rechte Spalte: Videos & Doku */}
+          <aside className="card">
+            <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Videos & Dokumentation</h2>
+            <p className="muted" style={{ marginBottom: '0.75rem' }}>
+              Kurze App-Demos und begleitende Projektunterlagen.
             </p>
-          )}
-        </article>
 
-        {/* rechte Spalte: Screenshots & Doku */}
-        <aside className="card">
-          <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Screenshots & Dokumentation</h2>
-          <p className="muted" style={{ marginBottom: '0.75rem' }}>
-            Hier sind einige Screenshots und gegebenenfalls weiterführende Projektunterlagen zu finden.
-          </p>
-
-          {isRateMe && (
-            <>
-              <div className="project-images-placeholder">
-                <div className="project-image-slot">
-                  <video
-                    src={`${base}rateme/rateme-login.mp4`}
-                    controls
-                    muted
-                    playsInline
-                    style={{ width: '100%', borderRadius: '0.5rem' }}
-                  >
-                    Dein Browser unterstützt das Video-Tag nicht.
-                  </video>
-                  <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
-                    Login / Signup
-                  </p>
-                </div>
-
-                <div className="project-image-slot">
-                  <video
-                    src={`${base}rateme/rateme-scan.mp4`}
-                    controls
-                    muted
-                    playsInline
-                    style={{ width: '100%', borderRadius: '0.5rem' }}
-                  >
-                    Dein Browser unterstützt das Video-Tag nicht.
-                  </video>
-                  <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
-                    Barcode-Scan & Produktansicht
-                  </p>
-                </div>
-
-                <div className="project-image-slot">
-                  <video
-                    src={`${base}rateme/rateme-history.mp4`}
-                    controls
-                    muted
-                    playsInline
-                    style={{ width: '100%', borderRadius: '0.5rem' }}
-                  >
-                    Dein Browser unterstützt das Video-Tag nicht.
-                  </video>
-                  <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
-                    History & Favourites
-                  </p>
-                </div>
-
-                <div className="project-image-slot">
-                  <video
-                    src={`${base}rateme/rateme-settings.mp4`}
-                    controls
-                    muted
-                    playsInline
-                    style={{ width: '100%', borderRadius: '0.5rem' }}
-                  >
-                    Dein Browser unterstützt das Video-Tag nicht.
-                  </video>
-                  <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
-                    Settings / About us
-                  </p>
-                </div>
+            <div className="project-images-placeholder">
+              <div className="project-image-slot">
+                <video
+                  src={`${base}rateme/rateme-login.mp4`}
+                  controls
+                  muted
+                  playsInline
+                  style={{ width: '100%', borderRadius: '0.5rem' }}
+                >
+                  Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                  Login / Signup
+                </p>
               </div>
 
-              <h3 style={{ marginTop: '1rem', marginBottom: '.4rem' }}>Projektunterlagen</h3>
-              <ul className="muted" style={{ paddingLeft: '1.1rem', margin: 0 }}>
-                <li>
-                  <a
-                    href={`${base}rateme/RateMe_Presentation.pptx`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Projektpräsentation (PPTX)
-                  </a>
-                </li>
-                <li>
-                  <a href={`${base}rateme/RateMe_Report.pdf`} target="_blank" rel="noreferrer">
-                    Projektdokumentation (PDF)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={`${base}rateme/RateMe_Description.pdf`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Funktions- & Feature-Beschreibung (PDF)
-                  </a>
-                </li>
-              </ul>
-            </>
-          )}
+              <div className="project-image-slot">
+                <video
+                  src={`${base}rateme/rateme-scan.mp4`}
+                  controls
+                  muted
+                  playsInline
+                  style={{ width: '100%', borderRadius: '0.5rem' }}
+                >
+                  Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                  Barcode-Scan & Produktansicht
+                </p>
+              </div>
 
-          {!isRateMe && (
-            <div className="project-images-placeholder">
-              <div className="project-image-slot">Screenshot 1</div>
-              <div className="project-image-slot">Screenshot 2</div>
+              <div className="project-image-slot">
+                <video
+                  src={`${base}rateme/rateme-history.mp4`}
+                  controls
+                  muted
+                  playsInline
+                  style={{ width: '100%', borderRadius: '0.5rem' }}
+                >
+                  Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                  History & Favourites
+                </p>
+              </div>
+
+              <div className="project-image-slot">
+                <video
+                  src={`${base}rateme/rateme-settings.mp4`}
+                  controls
+                  muted
+                  playsInline
+                  style={{ width: '100%', borderRadius: '0.5rem' }}
+                >
+                  Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                <p className="muted" style={{ fontSize: '.8rem', marginTop: '.3rem' }}>
+                  Settings / About us
+                </p>
+              </div>
             </div>
-          )}
-        </aside>
-      </div>
+
+            <h3 style={{ marginTop: '1rem', marginBottom: '.4rem' }}>Projektunterlagen</h3>
+            <ul className="muted" style={{ paddingLeft: '1.1rem', margin: 0 }}>
+              <li>
+                <a href={`${base}rateme/RateMe_Presentation.pptx`} target="_blank" rel="noreferrer">
+                  Projektpräsentation (PPTX)
+                </a>
+              </li>
+              <li>
+                <a href={`${base}rateme/RateMe_Report.pdf`} target="_blank" rel="noreferrer">
+                  Projektdokumentation (PDF)
+                </a>
+              </li>
+              <li>
+                <a href={`${base}rateme/RateMe_Description.pdf`} target="_blank" rel="noreferrer">
+                  Funktions- & Feature-Beschreibung (PDF)
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <div style={{ marginTop: '1.5rem' }}>
+          <Link to="/projects" className="btn">
+            ← Zur Projektübersicht
+          </Link>
+        </div>
+      </section>
+    )
+  }
+
+  // Spezielle Detailansicht: Outdoor-Planer (Wetter-App)
+  if (project.id === 'outdoor-planner') {
+    const base = import.meta.env.BASE_URL || '/'
+
+    return (
+      <section className="project-detail">
+        <header className="project-detail-header card">
+          <div>
+            <h1 className="section-title">{project.title}</h1>
+            <p className="muted">
+              Single-Page-Webanwendung, die das aktuelle Wetter in Weingarten anzeigt
+              und Outdoor-Termine inklusive Datum, Uhrzeit, Beschreibung und
+              „ganztägig“-Option verwalten kann.
+            </p>
+          </div>
+          <div className="project-detail-tags">
+            {project.technologies?.map(tech => (
+              <span key={tech} className="tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </header>
+
+        <div className="grid grid-2 project-detail-body" style={{ marginBottom: '1.5rem' }}>
+          {/* linke Spalte: Beschreibung */}
+          <article className="card">
+            <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Projektüberblick</h2>
+            <p className="muted">
+              Die App kombiniert Wetterabfrage und Terminverwaltung: Auf der Startseite
+              wird das aktuelle Wetter (Icon, Temperatur, Regenrisiko) für Weingarten
+              angezeigt. Im Outdoor-Planer können Nutzer eigene Termine anlegen,
+              als ganztägig markieren und verwalten.
+            </p>
+            <p className="muted">
+              Jeder Termin besteht aus Titel, Datum, optionaler Uhrzeit, Beschreibung
+              und der Info, ob er ganztägig stattfindet. Termine lassen sich speichern
+              und wieder löschen. Das Layout ist bewusst klar gehalten, damit auch auf
+              kleineren Bildschirmen eine gute Übersicht erhalten bleibt.
+            </p>
+
+            <h3 style={{ marginTop: '1.2rem' }}>Technik</h3>
+            <ul className="muted" style={{ paddingLeft: '1.1rem' }}>
+              <li>React Single Page Application mit einfachem Routing</li>
+              <li>Wetterdaten über eine externe Wetter-API (z. B. OpenWeatherMap)</li>
+              <li>State-Management mit React Hooks für Terminliste und Formulare</li>
+              <li>Responsives Layout mit CSS für Desktop-Ansicht</li>
+            </ul>
+
+            <h3 style={{ marginTop: '1.2rem' }}>Links</h3>
+            <ul className="muted" style={{ paddingLeft: '1.1rem' }}>
+              <li>
+                Live-Demo:&nbsp;
+                <a
+                  href="https://outdoorplaner.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  outdoorplaner.netlify.app
+                </a>
+              </li>
+              <li>
+                GitHub-Repository:&nbsp;
+                <a
+                  href="https://github.com/EmirTutar/wetterapp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  github.com/EmirTutar/wetterapp
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          {/* rechte Spalte: Screenshots */}
+          <aside className="card">
+            <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Screenshots</h2>
+            <p className="muted" style={{ marginBottom: '0.75rem' }}>
+              Einblicke in Home-Ansicht und Outdoor-Planer.
+            </p>
+
+            <div className="project-images-placeholder">
+              <ZoomableImage
+                src={`${base}outdoor-planner/home.png`}
+                alt="Home-Ansicht mit aktuellem Wetter in Weingarten"
+                caption="Home: aktuelles Wetter in Weingarten mit Temperatur und Regenrisiko."
+              />
+              <ZoomableImage
+                src={`${base}outdoor-planner/planner.png`}
+                alt="Outdoor-Planer mit Terminformular und Terminliste"
+                caption="Outdoor-Planer: Terminformular und Liste der geplanten Outdoor-Termine."
+              />
+            </div>
+          </aside>
+        </div>
+
+        <div style={{ marginTop: '1.5rem' }}>
+          <Link to="/projects" className="btn">
+            ← Zur Projektübersicht
+          </Link>
+        </div>
+      </section>
+    )
+  }
+
+  // Fallback für alle anderen Projekte
+  return (
+    <section className="project-detail">
+      <header className="project-detail-header card">
+        <div>
+          <h1 className="section-title">{project.title}</h1>
+          <p className="muted">
+            {project.category === 'work' && 'Berufliches Projekt'}
+            {project.category === 'study' && 'Projekt im Studium'}
+            {project.category === 'private' && 'Privates Projekt'}
+          </p>
+        </div>
+        <div className="project-detail-tags">
+          {project.technologies?.map(tech => (
+            <span key={tech} className="tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </header>
+
+      <article className="card" style={{ marginTop: '1rem' }}>
+        <h2 style={{ marginTop: 0, marginBottom: '.5rem' }}>Kurzbeschreibung</h2>
+        <p className="muted">{project.description}</p>
+
+        {project.links?.github && (
+          <p style={{ marginTop: '1.2rem' }}>
+            <strong>GitHub:&nbsp;</strong>
+            <a href={project.links.github} target="_blank" rel="noreferrer">
+              {project.links.github}
+            </a>
+          </p>
+        )}
+      </article>
 
       <div style={{ marginTop: '1.5rem' }}>
         <Link to="/projects" className="btn">
