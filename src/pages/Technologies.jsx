@@ -9,7 +9,7 @@ export default function Technologies() {
       <div className="grid grid-2">
         {technologies.map((group, idx) => (
           <div className="card" key={idx}>
-            <h3>{group.group}</h3>
+            <h3>{t(group.groupKey)}</h3>
             <div style={{marginTop:'.5rem'}}>
               {group.items.map((it, i) => <span className="tag" key={i}>{it}</span>)}
             </div>

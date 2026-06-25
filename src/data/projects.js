@@ -1,11 +1,10 @@
 const projects = [
   {
     id: "ecal-test-suite",
-    title: "eCAL Test Suite – IPC Integration Testing",
-    category: "work", // 'work' | 'study' | 'private'
+    titleKey: "projects.data.ecal_test_suite.title",
+    descriptionKey: "projects.data.ecal_test_suite.description",
+    category: "work",
     Effort: 5,
-    description:
-      "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI).",
     technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages", "LaTeX"],
     links: {
       github: "https://github.com/EmirTutar/bachelor-thesis-ipc-testing",
@@ -14,11 +13,10 @@ const projects = [
   },
   {
     id: "personal-site",
-    title: "Personal Portfolio Website",
+    titleKey: "projects.data.personal_site.title",
+    descriptionKey: "projects.data.personal_site.description",
     category: "private",
     Effort: 5,
-    description:
-      "Multilingual developer portfolio (EN/DE/TR) with dark theme, routing, i18n and embedded PDF résumé, deployed via GitHub Pages.",
     technologies: ["React", "JavaScript", "CSS", "HTML", "Vite", "i18next"],
     links: {
       github: "https://github.com/EmirTutar/Portfolio",
@@ -27,11 +25,10 @@ const projects = [
   },
   {
     id: "rateme",
-    title: "RateMe – Android Produktbewertungs-App",
+    titleKey: "projects.data.rateme.title",
+    descriptionKey: "projects.data.rateme.description",
     category: "study",
     Effort: 4,
-    description:
-      "Android-App zum Scannen von Barcodes, Anzeigen von Produktinfos und Speichern von Bewertungen in Firebase.",
     technologies: ["Android", "Java", "Firebase Auth", "Firestore", "REST-API"],
     links: {
       github: "https://github.com/EmirTutar/RateMe_AndroidApp",
@@ -40,11 +37,10 @@ const projects = [
   },
   {
     id: "outdoor-planner",
-    title: "Outdoor Planner – Weather-Aware Scheduler",
+    titleKey: "projects.data.outdoor_planner.title",
+    descriptionKey: "projects.data.outdoor_planner.description",
     category: "study",
     Effort: 2,
-    description:
-      "Web app that combines event planning with live weather data to support outdoor activities and avoid bad-weather appointments.",
     technologies: ["Vue.js", "JavaScript", "CSS", "HTML", "API"],
     links: {
       github: "https://github.com/EmirTutar/wetterapp",
@@ -53,11 +49,10 @@ const projects = [
   },
   {
     id: "turtlebot_driving",
-    title: "Autonomous Turtlebot Navigation",
+    titleKey: "projects.data.turtlebot.title",
+    descriptionKey: "projects.data.turtlebot.description",
     category: "study",
     Effort: 5,
-    description:
-      "ROS project enabling a mobile robot to autonomously navigate to predefined goals using navigation stack and costmaps.",
     technologies: ["ROS", "Python", "CMake"],
     links: {
       github: "https://github.com/EmirTutar/turtlebot_driving",
@@ -66,72 +61,58 @@ const projects = [
   },
   {
     id: "patient-monitoring",
-    title: "Patient Monitoring Prototype",
+    titleKey: "projects.data.patient_monitoring.title",
+    descriptionKey: "projects.data.patient_monitoring.description",
     category: "study",
     Effort: 5,
-    description: 'Kamera-basiertes Fall- und Bett-Monitoring mit Docker, MQTT und Raspberry Pi.',
-    technologies: ['Docker', 'Raspberry Pi', 'YOLOv5', 'MQTT', 'Matrix', 'Python'],
+    technologies: ["Docker", "Raspberry Pi", "YOLOv5", "MQTT", "Matrix", "Python"],
     links: {
       github: "https://github.com/EmirTutar/Patientenmonitoring",
       demo: null
     }
   },
-
   {
-    id: 'systemsicherheit-labs',
-    title: 'System Security – Practical Labs',
-    category: 'study',
+    id: "systemsicherheit-labs",
+    titleKey: "projects.data.systemsicherheit.title",
+    descriptionKey: "projects.data.systemsicherheit.description",
+    category: "study",
     Effort: 4,
-    description:
-      'Praktische Übungen zu Angriffsvektoren und Abwehrmaßnahmen: von OSINT und Port-Scanning über Web-Schwachstellen bis hin zu CMS- und Netzwerkangriffen.',
-    technologies: [
-      'Linux',
-      'Wireshark',
-      'Bash'
-    ],
+    technologies: ["Linux", "Wireshark", "Bash"],
     links: {
       github: null,
       demo: null
     }
   },
-
   {
     id: "mission-fried-chicken",
-    title: "Mission Fried Chicken",
+    titleKey: "projects.data.mfc.title",
+    descriptionKey: "projects.data.mfc.description",
     category: "study",
     Effort: 3,
-    description:
-      "Game project developed during studies; small gameplay prototype focused on experimenting with game mechanics and implementation.",
-    technologies: [
-      ["C#"],
-    ],
+    technologies: ["C#"],
     links: {
       github: "https://github.com/EmirTutar/MissionFriedChicken",
       demo: null
     }
   },
-
   {
     id: "java-testing",
-    title: "AI-Assisted Java Software Testing",
+    titleKey: "projects.data.java_testing.title",
+    descriptionKey: "projects.data.java_testing.description",
     category: "study",
     Effort: 4,
-    description:
-      "Project work on using ChatGPT to generate software tests for Java projects and evaluating the quality and efficiency of the generated tests.",
     technologies: ["Java", "Maven", "Software Testing", "LaTeX", "ChatGPT"],
     links: {
       github: "https://github.com/EmirTutar/PA_KI_Softwaretests_Java",
       demo: null
     }
   },
-
   {
     id: "radar-game",
-    title: "RadarGame – C# Game Prototype",
+    titleKey: "projects.data.radar_game.title",
+    descriptionKey: "projects.data.radar_game.description",
     category: "study",
     Effort: 4,
-    description:
-      "C# game prototype exploring radar-style visuals, rendering and basic game engine structures.",
     technologies: ["C#", "GLSL", "Shader Programming"],
     links: {
       github: "https://github.com/EmirTutar/RadarGame",

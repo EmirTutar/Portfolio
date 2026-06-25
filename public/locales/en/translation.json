@@ -7,9 +7,27 @@
     "resume": "Resume",
     "contact": "Contact"
   },
+  "common": {
+    "click_to_zoom": "(Click to enlarge)",
+    "video_not_supported": "Your browser does not support the video tag.",
+    "pdf_not_supported": "PDF cannot be displayed.",
+    "download_here": "Download here",
+    "back_to_projects": "← Back to Projects",
+    "github": "GitHub",
+    "live_demo": "Live Demo",
+    "github_repo": "GitHub Repository"
+  },
   "home": {
     "title": "Welcome to my portfolio",
     "subtitle": "Software development, test automation and diverse software projects",
+    "hero": {
+      "greeting": "Hi, I'm",
+      "badge": "Software Developer",
+      "role_line1": "Your Software",
+      "role_line2": "Engineer",
+      "cta_projects": "View Projects",
+      "cta_resume": "View Resume"
+    },
     "highlights": {
       "projects": "Projects",
       "projects_desc": "Selected work from studies, industry and private projects – from Android apps and web applications to robotics and game prototypes.",
@@ -20,7 +38,82 @@
     }
   },
   "timeline": {
-    "title": "Education & Experience"
+    "title": "Education & Experience",
+    "section_experience": "Work Experience",
+    "section_education": "Education",
+    "exp": {
+      "0": {
+        "title": "Bachelor Thesis: Automated Testing of IPC Middleware",
+        "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
+        "d0": "Bachelor thesis: Developing a Concept for Automated Testing of IPC Middleware – Demonstrated with eCAL",
+        "d1": "Design and implementation of an automated test framework for IPC middleware",
+        "d2": "Implementation of Docker- and Robot Framework-based integration tests",
+        "d3": "Design of test cases (Publish/Subscribe, RPC, crash and network failure scenarios)",
+        "d4": "Integration into a CI/CD pipeline with GitHub Actions"
+      },
+      "1": {
+        "title": "Mandatory Internship: Software Bring Up and Test",
+        "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
+        "d0": "Integration and commissioning of software and hardware components for sensor data processing and IPC",
+        "d1": "Development and optimization of software modules in C++ and Python",
+        "d2": "Use of eCAL middleware (publisher-subscriber model)",
+        "d3": "Testing and validation in simulation and vehicle",
+        "d4": "Use of Jenkins for build and test process automation (CI/CD)"
+      },
+      "2": {
+        "title": "Tutor – Programming (Java Lab)",
+        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "d0": "Supervision of students in the Java lab course",
+        "d1": "Support with implementation, debugging and troubleshooting",
+        "d2": "Teaching core programming concepts and best practices"
+      },
+      "3": {
+        "title": "Production Assistant",
+        "org": "ZF Friedrichshafen, Friedrichshafen",
+        "d0": "Quality assurance of planet carriers in series production",
+        "d1": "Operation and basic maintenance of KUKA robots",
+        "d2": "Work on press machines: setup and execution of pressing operations"
+      },
+      "4": {
+        "title": "Internship: Electronics Technician (Automation Technology)",
+        "org": "BWC Lindau, Lindau",
+        "d0": "Assistance with automation and optimization of control cabinets",
+        "d1": "Construction and programming of control cabinets"
+      }
+    },
+    "edu": {
+      "0": {
+        "title": "Applied Computer Science, B.Sc.",
+        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "d0": "Specialization: Robotics & Smart Devices",
+        "d1": "Current GPA: 2.4 (German scale)"
+      },
+      "1": {
+        "title": "Technical University Entrance Qualification (Technology)",
+        "org": "FOS Lindau (Bavaria)",
+        "d0": "School internship in metal, electrical, and construction technology",
+        "d1": "GPA: 2.4 (German scale)"
+      },
+      "2": {
+        "title": "Secondary School Certificate (Technology)",
+        "org": "Realschule im Dreiländereck, Lindau (Bavaria)",
+        "d0": "Student representative (Grade 9 & 10)",
+        "d1": "GPA: 2.5 (German scale)"
+      }
+    }
+  },
+  "technologies": {
+    "title": "Technologies & Skills",
+    "groups": {
+      "lang_advanced": "Programming Languages – Advanced",
+      "lang_good": "Programming Languages – Good Knowledge",
+      "lang_basic": "Programming Languages – Basics",
+      "frameworks": "Frameworks & Libraries",
+      "devops": "DevOps, Cloud & CI",
+      "build_tools": "Build & Project Tools",
+      "databases": "Databases & Tools",
+      "ides": "IDEs & Editors"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -30,10 +123,219 @@
       "work": "Work",
       "study": "Study",
       "private": "Private"
+    },
+    "effort_label": "Effort",
+    "category_work": "Work Project",
+    "category_study": "Study Project",
+    "category_private": "Private Project",
+    "no_projects": "No projects in this category yet.",
+    "not_found": "Project not found.",
+    "back_link": "← Back to Projects",
+    "data": {
+      "ecal_test_suite": {
+        "title": "eCAL Test Suite – IPC Integration Testing",
+        "description": "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI)."
+      },
+      "personal_site": {
+        "title": "Personal Portfolio Website",
+        "description": "Multilingual developer portfolio (EN/DE/TR) with dark theme, routing, i18n and embedded PDF résumé, deployed via GitHub Pages."
+      },
+      "rateme": {
+        "title": "RateMe – Android Product Rating App",
+        "description": "Android app for scanning barcodes, displaying product info and saving ratings in Firebase."
+      },
+      "outdoor_planner": {
+        "title": "Outdoor Planner – Weather-Aware Scheduler",
+        "description": "Web app that combines event planning with live weather data to support outdoor activities and avoid bad-weather appointments."
+      },
+      "turtlebot": {
+        "title": "Autonomous Turtlebot Navigation",
+        "description": "ROS project enabling a mobile robot to autonomously navigate to predefined goals using navigation stack and costmaps."
+      },
+      "patient_monitoring": {
+        "title": "Patient Monitoring Prototype",
+        "description": "Camera-based fall and bed monitoring with Docker, MQTT and Raspberry Pi."
+      },
+      "systemsicherheit": {
+        "title": "System Security – Practical Labs",
+        "description": "Hands-on exercises on attack vectors and defenses: from OSINT and port scanning to web vulnerabilities and network attacks."
+      },
+      "mfc": {
+        "title": "Mission Fried Chicken",
+        "description": "Game project developed during studies; small gameplay prototype focused on experimenting with game mechanics and implementation."
+      },
+      "java_testing": {
+        "title": "AI-Assisted Java Software Testing",
+        "description": "Project work on using ChatGPT to generate software tests for Java projects and evaluating the quality and efficiency of the generated tests."
+      },
+      "radar_game": {
+        "title": "RadarGame – C# Game Prototype",
+        "description": "C# game prototype exploring radar-style visuals, rendering and basic game engine structures."
+      }
+    },
+    "detail": {
+      "overview": "Project Overview",
+      "links_resources": "Links & Resources",
+      "links_stack": "Links & Stack",
+      "screenshots": "Screenshots",
+      "screenshots_diagrams": "Screenshots & Diagrams",
+      "thesis_pdf": "Bachelor Thesis (PDF)",
+      "videos_documentation": "Videos & Documentation",
+      "materials": "Project Materials",
+      "short_description": "Short Description",
+      "technology": "Technology",
+      "links": "Links",
+      "documentation_presentation": "Documentation & Presentation",
+      "documentation_pdf": "Project Documentation (PDF)",
+      "presentation_pdf": "Presentation (PDF)",
+      "presentation_pptx": "Project Presentation (PPTX)",
+      "features_pdf": "Feature Description (PDF)",
+      "report_pdf": "Project Report (PDF)",
+      "trailer_presentation": "Trailer & Presentation",
+      "key_results": "Key Results",
+      "fullscreen_tip": "Tip: Watch the video in fullscreen for best quality.",
+      "main_technologies": "Main technologies"
+    },
+    "ecal": {
+      "subtitle": "Docker and Robot Framework-based integration tests for the open-source eCAL middleware — including a generic test concept, test case templates, and CI/CD integration.",
+      "overview_p": "As part of my bachelor thesis «Developing a Concept for Automated Testing of IPC Middleware – Demonstrated with eCAL» I designed a reusable test concept for IPC middleware and implemented it with eCAL. The test suite verifies Publish/Subscribe communication, RPC scenarios, crash behavior, and network interruptions across various transport layers (SHM, UDP, TCP).",
+      "li0": "Standardized folder structure and Docker setup per test case",
+      "li1": "Robot Framework tests for functional and robust communication",
+      "li2": "Automated execution via GitHub Actions",
+      "li3": "Test report deployment via GitHub Pages",
+      "link_suite": "eCAL Test Suite (Software)",
+      "link_middleware": "eCAL Middleware (Repo)",
+      "link_thesis": "Developing a Concept for Automated Testing of IPC Middleware",
+      "link_presentation": "IPC Testing – Presentation",
+      "cap0": "GitHub Pages overview of all test runs with links to detailed reports.",
+      "cap1": "Robot Framework report with status, statistics and runtimes.",
+      "cap2": "Execution flow: Robot Framework → Docker build → container → eCAL test application → reports.",
+      "cap3": "Standardized structure per test case (C++, Robot tests, scripts, Dockerfile, libraries).",
+      "cap4": "Test case 'RPC Reconnect': network failure, reconnect and successful RPC communication.",
+      "cap5": "Test case 'Publisher Crash': publisher crashes, subscriber remains stable and reports the failure scenario."
+    },
+    "personal_site": {
+      "subtitle": "Multilingual portfolio website with dark theme, project overview, timeline, tech stack and embedded CV — deployed via GitHub Pages.",
+      "overview_p": "This portfolio serves as a central hub for my projects, career history, and tech stack. The site is available in German, English, and Turkish, and uses a modern dark theme with React, Vite, and i18next.",
+      "li0": "Multilingual interface (DE/EN/TR) with i18next",
+      "li1": "Pages for timeline, projects, technologies, resume, and contact",
+      "li2": "PDF embedding for the resume directly in the browser",
+      "li3": "Deployment via GitHub Pages with automated build",
+      "links_p": "The site is built as a React single-page application and bundled with Vite."
+    },
+    "rateme": {
+      "subtitle": "Study project – Android rating app.",
+      "app_structure": "App Structure",
+      "p0": "The RateMe app is a user-friendly platform that allows users to rate and track products. Registration is done via email verification to ensure authentic users. After login, users are taken directly to the main page.",
+      "p1": "There, they can check products by scanning barcodes. Product data is retrieved via an API, and the app displays product images, key information, and the average of existing ratings.",
+      "p2": "Via the «Rate Product» button, users can submit their own ratings and leave comments. Comments from other users are visible, but only your own can be deleted. Products can be marked as favorites or removed from the list, and a history saves previously scanned products.",
+      "p3": "In the settings, users can log out, manage permissions, and in the «About us» section view information about the app developers. The profile displays personal data and allows setting a profile picture.",
+      "p4": "Technically, the app is based on Firebase for authentication and data management, as well as an external API for product information.",
+      "purpose": "Purpose & Value",
+      "purpose_p": "RateMe enables users to rate, comment on, track, and create personal favorites lists for products. This allows for more targeted purchasing decisions, faster clarification of questions about specific products, and creation of a personal collection of relevant products.",
+      "target": "Target Audience",
+      "target_p": "The app targets consumers looking for a simple way to access product ratings and comments independently of individual platforms. It provides compact product information and helps users better organize and optimize their shopping experiences.",
+      "videos_p": "Short app demos and accompanying project materials.",
+      "login_signup": "Login / Signup",
+      "barcode_scan": "Barcode Scan & Product View",
+      "history_fav": "History & Favourites",
+      "settings_about": "Settings / About us",
+      "link_pptx": "Project Presentation (PPTX)",
+      "link_pdf": "Project Documentation (PDF)",
+      "link_features": "Feature & Function Description (PDF)"
+    },
+    "outdoor": {
+      "subtitle": "Single-page web app that displays current weather in Weingarten and manages outdoor appointments including date, time, description, and an all-day option.",
+      "overview_p0": "The app combines weather queries and appointment management: the home page displays current weather (icon, temperature, rain risk) for Weingarten. In the outdoor planner, users can create their own appointments, mark them as all-day, and manage them.",
+      "overview_p1": "Each appointment consists of a title, date, optional time, description, and whether it is all-day. Appointments can be saved and deleted. The layout is deliberately clear so that a good overview is maintained even on smaller screens.",
+      "tech_h": "Technology",
+      "li0": "React Single Page Application with simple routing",
+      "li1": "Weather data via an external weather API (e.g. OpenWeatherMap)",
+      "li2": "State management with React Hooks for appointment list and forms",
+      "li3": "Responsive layout with CSS for desktop view",
+      "screenshots_p": "Views of the home screen and outdoor planner.",
+      "cap0": "Home: current weather in Weingarten with temperature and rain risk.",
+      "cap1": "Outdoor Planner: appointment form and list of planned outdoor appointments."
+    },
+    "radar": {
+      "subtitle": "Small game project with a space setting: a spaceship moves through the game space while the player responds to objects and events visible on a radar view.",
+      "overview_p0": "RadarGame is an experimental game project focused on simple but clear game mechanics: the player controls a spaceship and uses a radar-based view to navigate, avoid obstacles, and respond to events.",
+      "overview_p1": "The goal was to cleanly structure game and UI logic and implement basic game loop mechanics (update, movement, collision logic, etc.). The project is well-suited for quickly prototyping gameplay ideas and extending them later.",
+      "trailer_h": "SpaceShip Trailer",
+      "trailer_p": "Short gameplay trailer showing the spaceship and basic game mechanics.",
+      "fullscreen_tip": "Tip: Watch the video in fullscreen for best quality."
+    },
+    "mfc": {
+      "subtitle": "Small arcade-style game project: Mission Fried Chicken combines simple, focused gameplay with a humorous 'Space Chicken on a mission' setting.",
+      "overview_p0": "The goal was to build a small, self-contained game while cleanly structuring game logic, UI, and simple animations. The focus is a chicken-space setting with emphasis on control, responsiveness, and timing.",
+      "overview_p1": "Mission Fried Chicken is well-suited for demonstrating basic game loop concepts (update cycle, inputs, collision logic, game state) as well as menu and scene structure.",
+      "trailer_h": "Trailer & Presentation",
+      "trailer_p": "Short gameplay trailer and a presentation summarizing the idea and structure of the game.",
+      "trailer_caption": "SpaceShip / Mission Fried Chicken – Gameplay Trailer.",
+      "link_pptx": "Mission Fried Chicken – Presentation (PPTX)"
+    },
+    "patient": {
+      "subtitle": "Camera-based patient monitoring system with fall detection via YOLOv5, Docker-based server infrastructure, and alerting via MQTT, Matrix (chat), and hardware alarm on Raspberry Pi.",
+      "overview_p": "As part of a system administration project, a Patient Monitoring System was implemented that automatically detects falls and critical situations and actively warns nursing staff. Multiple Raspberry Pis with cameras monitor the bed and room; a Docker-based server processes images with YOLOv5 and distributes states via MQTT.",
+      "li0": "YOLOv5-based fall detection system (walking / sitting / fall detected)",
+      "li1": "Docker & Docker-Compose setup for all services (MQTT, Matrix, Mail, YOLO)",
+      "li2": "MQTT broker as central communication layer between all components",
+      "li3": "Matrix server for encrypted alert messages to nursing staff",
+      "li4": "Hardware alarm via Raspberry Pi (LEDs, buzzer, button)",
+      "purpose_h": "Goal & Benefits",
+      "purpose_p": "The goal is to increase patient safety in clinics and care facilities without requiring expensive proprietary solutions. The system combines affordable hardware (Raspberry Pi) with open-source software (Docker, Mosquitto, Matrix, YOLOv5) and enables:",
+      "purpose_li0": "Early detection of falls and critical situations",
+      "purpose_li1": "Real-time notifications to nursing staff (Matrix & email)",
+      "purpose_li2": "Clear visual/audible alarms directly on the ward",
+      "purpose_li3": "A modular structure that is easy to extend and maintain",
+      "cap0": "System architecture: two camera perspectives (bed & room) send data via a broker to the detection and alert components.",
+      "cap1": "Matrix server architecture: encrypted chat/alert channels for nursing staff.",
+      "cap2": "YOLOv5 fall detection with three classes: 'walking', 'sitting' and 'fall detected'.",
+      "cap3": "Alarm hardware: Raspberry Pi with LEDs (Normal/Warning/Alarm) and buzzer for local signaling."
+    },
+    "java": {
+      "subtitle": "Project seminar on AI-assisted software test creation in Java: evaluating how well ChatGPT supports generating unit, integration, and UI tests.",
+      "overview_p": "The goal was to evaluate the potential of ChatGPT 4 for automated test generation in Java. Three example projects (Inventory Manager, Bank Manager, Farm Product Store) with different requirements for unit, UI, and integration tests were examined.",
+      "li0": "Comparison of code coverage, error rate, and prompt effort",
+      "li1": "Generation of unit, UI, and integration tests with ChatGPT",
+      "li2": "Iterative prompt engineering to improve tests",
+      "li3": "Evaluation of strengths and weaknesses of AI-assisted testing",
+      "results_p": "The evaluation shows that ChatGPT can achieve high code coverage with relatively little prompt effort, especially for classic unit and integration tests. For UI tests, error rates and correction effort increase, but the generated classes often provide a good starting point that a developer can further refine. Overall, the project confirms that AI-assisted test generation can significantly reduce manual effort, but always needs to be combined with review and expertise.",
+      "link_doc": "AI-Assisted Software Test Creation in Java",
+      "link_pres": "Test Generation with ChatGPT – Presentation"
+    },
+    "turtlebot": {
+      "subtitle": "Autonomous navigation of a mobile robot with ROS and the move_base stack — including zone concept, goal selection algorithm, and robust deadlock handling.",
+      "overview_p": "The goal was to let a Turtlebot navigate autonomously through an arena. Based on a pre-created map (gmapping) and amcl_pose localization, the robot travels to predefined navigation goals in sequence. These goals are divided into 'easy' and 'hard' zones.",
+      "li0": "All goals (coordinates, zone, reward) stored in a YAML file",
+      "li1": "Algorithm for selecting the next reachable goal",
+      "li2": "Phased approach: easy zone first, then hard zone",
+      "li3": "Modular class structure for goals and goal lists",
+      "behavior_h": "Robot Behavior & Solutions",
+      "behavior_p": "The codebase is divided into clear classes: a central Main class controls the workflow, while the Goal and GoalsList classes manage individual goals and the entire goal list, keeping the code maintainable and extensible.",
+      "bli0": "Goal Precision: higher map resolution, helper goals before the actual target, and regular clearing of the costmap.",
+      "bli1": "Blocked Goals: 30-second timeout, then resumption after cool-down via a second list.",
+      "bli2": "Deadlocks: detection of stuck situations and reverse/rotation to make way for other robots.",
+      "bli3": "Future Work: dynamic zone strategy and possible negotiation protocols between robots for path clearing.",
+      "hardware_h": "Hardware – Turtlebot Platform",
+      "caption": "Turtlebot platform with 360° LiDAR, Raspberry Pi, OpenCR controller, and DYNAMIXEL drives – the basis for autonomous navigation with ROS."
+    },
+    "sicherheit": {
+      "subtitle": "Hands-on laboratory exercises on network security and web application security — focusing on understanding attack vectors and appropriate countermeasures.",
+      "overview_h": "Overview",
+      "overview_p": "In the System Security module, I completed several practical labs and documented each in detailed reports. The exercises cover the complete workflow of a structured security test — from reconnaissance through network analysis to typical web vulnerabilities.",
+      "lab_h": "Lab Contents",
+      "li_recon": "Fundamentals & Reconnaissance: working in a security lab environment, OSINT, port scanning, and service enumeration.",
+      "li_network": "Network Security: analysis and configuration of firewalls, as well as selected attacks against networks in an isolated test environment.",
+      "li_web": "Web Application Security: examination of vulnerabilities such as LFI, SQL Injection, XSS, OS Command Injection, SSRF, and attacks on vulnerable CMS.",
+      "li_exploit": "Exploitation & Hardening: building shells in the lab environment, documenting vulnerabilities, and deriving appropriate protective measures.",
+      "lab_note": "All exercises took place in a controlled laboratory environment. The goal was to understand attack paths and develop a security mindset.",
+      "role_h": "Role & Learning Objectives",
+      "role_p": "Through the combination of practical tasks and written reports, I was able to significantly deepen my understanding of attack and defense mechanisms:",
+      "role_li0": "Systematic approach to security analyses (Recon → Exploit → Hardening).",
+      "role_li1": "Confident handling of typical web and network vulnerabilities.",
+      "role_li2": "Awareness of responsible and ethical use of security knowledge."
     }
-  },
-  "technologies": {
-    "title": "Technologies & Skills"
   },
   "resume": {
     "title": "Resume (PDF)",
@@ -44,5 +346,9 @@
   "contact": {
     "title": "Contact",
     "intro": "Reach me via:"
+  },
+  "footer": {
+    "copyright": "© {{year}} Emircan Tutar",
+    "built_with": "Built with React · Dark Theme"
   }
 }

@@ -7,20 +7,113 @@
     "resume": "Özgeçmiş",
     "contact": "İletişim"
   },
+  "common": {
+    "click_to_zoom": "(Büyütmek için tıklayın)",
+    "video_not_supported": "Tarayıcınız video etiketini desteklemiyor.",
+    "pdf_not_supported": "PDF görüntülenemiyor.",
+    "download_here": "Buradan indirin",
+    "back_to_projects": "← Proje listesine dön",
+    "github": "GitHub",
+    "live_demo": "Canlı Demo",
+    "github_repo": "GitHub Deposu"
+  },
   "home": {
     "title": "Portföyüme hoş geldiniz",
     "subtitle": "Yazılım geliştirme, test otomasyonu ve çeşitli yazılım projeleri",
+    "hero": {
+      "greeting": "Merhaba, ben",
+      "badge": "Yazılım Geliştirici",
+      "role_line1": "Yazılım",
+      "role_line2": "Mühendisi",
+      "cta_projects": "Projeleri Gör",
+      "cta_resume": "Özgeçmişi Gör"
+    },
     "highlights": {
       "projects": "Projeler",
       "projects_desc": "Lisans eğitimi, iş ve kişisel çalışmalardan seçilen projeler – Android uygulamalarından ve web projelerinden robotik ve oyun prototiplerine kadar.",
       "testing": "Yazılım kalitesi ve test",
       "testing_desc": "Otomatik testler, konteynerleştirme ve CI/CD hatları konusunda deneyim; özellikle Docker, Robot Framework ve GitHub Actions gibi araçlarla.",
       "stack": "Teknoloji yığını",
-      "stack_desc": "C/C++, Java, Python, modern web teknolojileri (React, Vue.js) ve Docker, ROS gibi araçlar ile yaygın geliştirici toolchain’lerinde pratik deneyim."
+      "stack_desc": "C/C++, Java, Python, modern web teknolojileri (React, Vue.js) ve Docker, ROS gibi araçlar ile yaygın geliştirici toolchain'lerinde pratik deneyim."
     }
   },
   "timeline": {
-    "title": "Eğitim ve İş Deneyimi"
+    "title": "Eğitim ve İş Deneyimi",
+    "section_experience": "İş Deneyimi",
+    "section_education": "Eğitim",
+    "exp": {
+      "0": {
+        "title": "Bitirme Tezi: IPC Ara Yazılımın Otomatik Testi",
+        "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
+        "d0": "Bitirme tezi: eCAL ile Gösterilen IPC Ara Yazılımı İçin Otomatik Test Konsepti Geliştirme",
+        "d1": "IPC ara yazılımı için otomatik test çerçevesinin tasarımı ve uygulanması",
+        "d2": "Docker ve Robot Framework tabanlı entegrasyon testlerinin uygulanması",
+        "d3": "Test senaryolarının tasarımı (Pub/Sub, RPC, çöküş ve ağ hatası senaryoları)",
+        "d4": "GitHub Actions ile CI/CD hattına entegrasyon"
+      },
+      "1": {
+        "title": "Zorunlu Staj: Yazılım Devreye Alma ve Test",
+        "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
+        "d0": "Sensör veri işleme ve IPC için yazılım ve donanım bileşenlerinin entegrasyonu ve devreye alınması",
+        "d1": "C++ ve Python'da yazılım modüllerinin geliştirilmesi ve optimizasyonu",
+        "d2": "eCAL ara yazılımının kullanımı (yayıncı-abone modeli)",
+        "d3": "Simülasyon ve araçta test ve doğrulama",
+        "d4": "Jenkins ile derleme ve test süreçlerinin otomasyonu (CI/CD)"
+      },
+      "2": {
+        "title": "Öğretim Asistanı – Programlama (Java Laboratuvarı)",
+        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "d0": "Java laboratuvarı dersinde öğrencilerin gözetimi",
+        "d1": "Uygulama, hata ayıklama ve sorun giderme konusunda destek",
+        "d2": "Temel programlama kavramları ve en iyi uygulamaların öğretilmesi"
+      },
+      "3": {
+        "title": "Üretim Yardımcısı",
+        "org": "ZF Friedrichshafen, Friedrichshafen",
+        "d0": "Seri üretimde gezegen taşıyıcıların kalite güvencesi",
+        "d1": "KUKA robotların çalıştırılması ve basit bakımı",
+        "d2": "Pres makineleri: kurulum ve presleme işlemlerinin gerçekleştirilmesi"
+      },
+      "4": {
+        "title": "Staj: Elektronik Teknisyeni (Otomasyon Teknolojisi)",
+        "org": "BWC Lindau, Lindau",
+        "d0": "Kontrol panellerinin otomasyonu ve optimizasyonuna yardım",
+        "d1": "Kontrol panellerinin yapımı ve programlanması"
+      }
+    },
+    "edu": {
+      "0": {
+        "title": "Uygulamalı Bilgisayar Bilimleri, B.Sc.",
+        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "d0": "Uzmanlık: Robotik & Akıllı Cihazlar",
+        "d1": "Güncel not ortalaması: 2,4 (Alman sistemi)"
+      },
+      "1": {
+        "title": "Teknik Lise Diploması (Teknoloji)",
+        "org": "FOS Lindau (Bavyera)",
+        "d0": "Metal, elektrik ve inşaat teknolojisinde okul stajı",
+        "d1": "Not ortalaması: 2,4 (Alman sistemi)"
+      },
+      "2": {
+        "title": "Ortaokul Diploması (Teknoloji)",
+        "org": "Realschule im Dreiländereck, Lindau (Bavyera)",
+        "d0": "Öğrenci temsilcisi (9. ve 10. sınıf)",
+        "d1": "Not ortalaması: 2,5 (Alman sistemi)"
+      }
+    }
+  },
+  "technologies": {
+    "title": "Teknolojiler ve Yetenekler",
+    "groups": {
+      "lang_advanced": "Programlama Dilleri – İleri Düzey",
+      "lang_good": "Programlama Dilleri – İyi Bilgi",
+      "lang_basic": "Programlama Dilleri – Temel",
+      "frameworks": "Çerçeveler & Kütüphaneler",
+      "devops": "DevOps, Bulut & CI",
+      "build_tools": "Derleme & Proje Araçları",
+      "databases": "Veritabanları & Araçlar",
+      "ides": "IDE'ler & Editörler"
+    }
   },
   "projects": {
     "title": "Projeler",
@@ -30,10 +123,219 @@
       "work": "İş",
       "study": "Öğrenim",
       "private": "Özel"
+    },
+    "effort_label": "Çaba",
+    "category_work": "İş Projesi",
+    "category_study": "Öğrenim Projesi",
+    "category_private": "Kişisel Proje",
+    "no_projects": "Bu kategoride henüz proje yok.",
+    "not_found": "Proje bulunamadı.",
+    "back_link": "← Proje listesine dön",
+    "data": {
+      "ecal_test_suite": {
+        "title": "eCAL Test Suite – IPC Entegrasyon Testi",
+        "description": "Docker ve Robot Framework kullanarak eCAL IPC ara yazılımı için otomatik entegrasyon testleri (Pub/Sub, RPC, hata senaryoları, CI)."
+      },
+      "personal_site": {
+        "title": "Kişisel Portföy Web Sitesi",
+        "description": "Karanlık temalı çok dilli geliştirici portföyü (DE/EN/TR), yönlendirme, i18n ve gömülü PDF özgeçmiş içerir, GitHub Pages üzerinden dağıtılır."
+      },
+      "rateme": {
+        "title": "RateMe – Android Ürün Değerlendirme Uygulaması",
+        "description": "Barkod tarama, ürün bilgisi görüntüleme ve Firebase'de derecelendirme kaydetme için Android uygulaması."
+      },
+      "outdoor_planner": {
+        "title": "Outdoor Planner – Hava Durumu Destekli Planlayıcı",
+        "description": "Açık hava etkinliklerini desteklemek ve kötü hava randevularını önlemek için etkinlik planlamayı canlı hava verileriyle birleştiren web uygulaması."
+      },
+      "turtlebot": {
+        "title": "Özerk Turtlebot Navigasyonu",
+        "description": "Bir mobil robotun navigasyon yığını ve maliyet haritaları kullanarak önceden tanımlanmış hedeflere özerk olarak gitmesini sağlayan ROS projesi."
+      },
+      "patient_monitoring": {
+        "title": "Hasta İzleme Prototipi",
+        "description": "Docker, MQTT ve Raspberry Pi ile kamera tabanlı düşme ve yatak izleme."
+      },
+      "systemsicherheit": {
+        "title": "Sistem Güvenliği – Pratik Laboratuvarlar",
+        "description": "Saldırı vektörleri ve savunmalar üzerine uygulamalı alıştırmalar: OSINT ve port tarama'dan web açıklarına ve ağ saldırılarına kadar."
+      },
+      "mfc": {
+        "title": "Mission Fried Chicken",
+        "description": "Öğrenim sırasında geliştirilen oyun projesi; oyun mekanikleri ve uygulaması üzerine deneyler yapılan küçük bir oynanış prototipi."
+      },
+      "java_testing": {
+        "title": "YZ Destekli Java Yazılım Testi",
+        "description": "Java projeleri için yazılım testleri oluşturmada ChatGPT kullanımı ve oluşturulan testlerin kalitesi ve verimliliğinin değerlendirilmesi üzerine proje çalışması."
+      },
+      "radar_game": {
+        "title": "RadarGame – C# Oyun Prototipi",
+        "description": "Radar tarzı görseller, render ve temel oyun motoru yapılarını keşfeden C# oyun prototipi."
+      }
+    },
+    "detail": {
+      "overview": "Projeye Genel Bakış",
+      "links_resources": "Bağlantılar & Kaynaklar",
+      "links_stack": "Bağlantılar & Yığın",
+      "screenshots": "Ekran Görüntüleri",
+      "screenshots_diagrams": "Ekran Görüntüleri & Diyagramlar",
+      "thesis_pdf": "Bitirme Tezi (PDF)",
+      "videos_documentation": "Videolar & Belgeler",
+      "materials": "Proje Materyalleri",
+      "short_description": "Kısa Açıklama",
+      "technology": "Teknoloji",
+      "links": "Bağlantılar",
+      "documentation_presentation": "Belgeler & Sunum",
+      "documentation_pdf": "Proje Belgesi (PDF)",
+      "presentation_pdf": "Sunum (PDF)",
+      "presentation_pptx": "Proje Sunumu (PPTX)",
+      "features_pdf": "Özellik Açıklaması (PDF)",
+      "report_pdf": "Proje Raporu (PDF)",
+      "trailer_presentation": "Fragman & Sunum",
+      "key_results": "Temel Sonuçlar",
+      "fullscreen_tip": "İpucu: En iyi kalite için videoyu tam ekranda izleyin.",
+      "main_technologies": "Ana teknolojiler"
+    },
+    "ecal": {
+      "subtitle": "Açık kaynaklı eCAL ara yazılımı için Docker ve Robot Framework tabanlı entegrasyon testleri — genel test konsepti, test şablonları ve CI/CD entegrasyonu dahil.",
+      "overview_p": "Bitirme tezim «eCAL ile Gösterilen IPC Ara Yazılımı İçin Otomatik Test Konsepti Geliştirme» kapsamında IPC ara yazılımı için yeniden kullanılabilir bir test konsepti tasarladım ve eCAL ile uyguladım. Test paketi, çeşitli aktarım katmanlarında (SHM, UDP, TCP) Pub/Sub iletişimini, RPC senaryolarını, çöküş davranışını ve ağ kesintilerini doğrular.",
+      "li0": "Test senaryosu başına standartlaştırılmış klasör yapısı ve Docker kurulumu",
+      "li1": "İşlevsel ve sağlam iletişim için Robot Framework testleri",
+      "li2": "GitHub Actions aracılığıyla otomatik yürütme",
+      "li3": "GitHub Pages üzerinden test raporu yayımlama",
+      "link_suite": "eCAL Test Suite (Yazılım)",
+      "link_middleware": "eCAL Middleware (Depo)",
+      "link_thesis": "IPC Ara Yazılımının Otomatik Testi İçin Konsept Geliştirme",
+      "link_presentation": "IPC Test – Sunum",
+      "cap0": "Tüm test çalışmalarının ayrıntılı raporlara bağlantılarıyla GitHub Pages genel bakışı.",
+      "cap1": "Durum, istatistikler ve çalışma süreleri ile Robot Framework raporu.",
+      "cap2": "Yürütme akışı: Robot Framework → Docker derleme → konteyner → eCAL test uygulaması → raporlar.",
+      "cap3": "Test senaryosu başına standartlaştırılmış yapı (C++, Robot testleri, betikler, Dockerfile, kütüphaneler).",
+      "cap4": "Test senaryosu 'RPC Reconnect': ağ arızası, yeniden bağlantı ve başarılı RPC iletişimi.",
+      "cap5": "Test senaryosu 'Publisher Crash': yayıncı çöküyor, abone kararlı kalıyor ve hata senaryosunu raporluyor."
+    },
+    "personal_site": {
+      "subtitle": "Karanlık temalı çok dilli portföy web sitesi, proje genel bakışı, zaman çizelgesi, teknoloji yığını ve gömülü CV içerir — GitHub Pages aracılığıyla dağıtılır.",
+      "overview_p": "Bu portföy, projelerim, kariyer geçmişim ve teknoloji yığınım için merkezi bir merkez olarak hizmet verir. Site Almanca, İngilizce ve Türkçe olarak mevcuttur ve React, Vite ve i18next ile modern bir karanlık tema kullanır.",
+      "li0": "i18next ile çok dilli arayüz (DE/EN/TR)",
+      "li1": "Zaman çizelgesi, projeler, teknolojiler, özgeçmiş ve iletişim sayfaları",
+      "li2": "Tarayıcıda doğrudan özgeçmiş PDF gömme",
+      "li3": "Otomatik derleme ile GitHub Pages üzerinden dağıtım",
+      "links_p": "Site bir React tek sayfa uygulaması olarak oluşturulmuş ve Vite ile paketlenmiştir."
+    },
+    "rateme": {
+      "subtitle": "Öğrenim projesi – Android değerlendirme uygulaması.",
+      "app_structure": "Uygulama Yapısı",
+      "p0": "RateMe uygulaması, kullanıcıların ürünleri değerlendirmesine ve takip etmesine olanak tanıyan kullanıcı dostu bir platformdur. Kayıt, otantik kullanıcıları sağlamak için e-posta doğrulaması yoluyla yapılır. Giriş yaptıktan sonra kullanıcılar doğrudan ana sayfaya yönlendirilir.",
+      "p1": "Orada barkod tarayarak ürünleri kontrol edebilirler. Ürün verileri bir API aracılığıyla alınır ve uygulama ürün görüntülerini, temel bilgileri ve mevcut derecelendirmelerin ortalamasını gösterir.",
+      "p2": "«Ürünü Değerlendir» butonu aracılığıyla kullanıcılar kendi değerlendirmelerini gönderebilir ve yorum bırakabilir. Diğer kullanıcıların yorumları görünür, ancak yalnızca kendi yorumlarınız silinebilir. Ürünler favori olarak işaretlenebilir veya listeden kaldırılabilir ve bir geçmiş, daha önce taranan ürünleri kaydeder.",
+      "p3": "Ayarlarda kullanıcılar oturumu kapatabilir, izinleri yönetebilir ve 'Hakkımızda' bölümünde uygulama geliştiricileri hakkında bilgi görebilir. Profil kişisel verileri gösterir ve profil resmi ayarlamaya izin verir.",
+      "p4": "Teknik olarak uygulama, kimlik doğrulama ve veri yönetimi için Firebase'e ve ürün bilgileri için harici bir API'ye dayanır.",
+      "purpose": "Amaç ve Değer",
+      "purpose_p": "RateMe, kullanıcıların ürünleri derecelendirmesine, yorum yapmasına, takip etmesine ve kişisel favori listesi oluşturmasına olanak tanır. Bu, daha hedefli satın alma kararları, belirli ürünlerle ilgili soruların daha hızlı çözülmesi ve ilgili ürünlerin kişisel bir koleksiyonunun oluşturulmasına olanak tanır.",
+      "target": "Hedef Kitle",
+      "target_p": "Uygulama, bağımsız platformlardan bağımsız olarak ürün derecelendirmelerine ve yorumlarına erişmenin basit bir yolunu arayan tüketicilere yönelik. Kompakt ürün bilgileri sağlar ve kullanıcıların alışveriş deneyimlerini daha iyi organize etmelerine ve optimize etmelerine yardımcı olur.",
+      "videos_p": "Kısa uygulama demoları ve eşlik eden proje materyalleri.",
+      "login_signup": "Giriş / Kayıt",
+      "barcode_scan": "Barkod Tarama & Ürün Görünümü",
+      "history_fav": "Geçmiş & Favoriler",
+      "settings_about": "Ayarlar / Hakkımızda",
+      "link_pptx": "Proje Sunumu (PPTX)",
+      "link_pdf": "Proje Belgesi (PDF)",
+      "link_features": "Özellik & Fonksiyon Açıklaması (PDF)"
+    },
+    "outdoor": {
+      "subtitle": "Weingarten'daki güncel hava durumunu gösteren ve tarih, saat, açıklama ve 'tüm gün' seçeneği dahil açık hava randevularını yöneten tek sayfalı web uygulaması.",
+      "overview_p0": "Uygulama, hava durumu sorgularını ve randevu yönetimini birleştirir: ana sayfa Weingarten için güncel hava durumunu (ikon, sıcaklık, yağmur riski) gösterir. Outdoor Planner'da kullanıcılar kendi randevularını oluşturabilir, tüm gün olarak işaretleyebilir ve yönetebilir.",
+      "overview_p1": "Her randevu, başlık, tarih, isteğe bağlı saat, açıklama ve tüm gün olup olmadığından oluşur. Randevular kaydedilebilir ve silinebilir.",
+      "tech_h": "Teknoloji",
+      "li0": "Basit yönlendirme ile React Tek Sayfa Uygulaması",
+      "li1": "Harici hava durumu API'si (örn. OpenWeatherMap) aracılığıyla hava verileri",
+      "li2": "Randevu listesi ve formlar için React Hooks ile durum yönetimi",
+      "li3": "Masaüstü görünümü için CSS ile duyarlı düzen",
+      "screenshots_p": "Ana ekran ve açık hava planlayıcısının görünümleri.",
+      "cap0": "Ana Sayfa: Weingarten'da sıcaklık ve yağmur riski ile güncel hava durumu.",
+      "cap1": "Outdoor Planner: randevu formu ve planlanan açık hava randevularının listesi."
+    },
+    "radar": {
+      "subtitle": "Uzay temalı küçük bir oyun projesi: bir uzay gemisi oyun alanında hareket ederken oyuncu radar görünümünde görünen nesnelere ve olaylara tepki verir.",
+      "overview_p0": "RadarGame, basit ama net oyun mekaniğine odaklanan deneysel bir oyun projesidir: oyuncu bir uzay gemisini kontrol eder ve radar tabanlı bir görünüm kullanarak gezinir, engellerden kaçar ve olaylara tepki verir.",
+      "overview_p1": "Amaç, oyun ve UI mantığını temiz bir şekilde yapılandırmak ve temel oyun döngüsü mekaniğini (güncelleme, hareket, çarpışma mantığı vb.) uygulamaktı.",
+      "trailer_h": "SpaceShip Fragmanı",
+      "trailer_p": "Uzay gemisini ve temel oyun mekaniğini gösteren kısa bir oynanış fragmanı.",
+      "fullscreen_tip": "İpucu: En iyi kalite için videoyu tam ekranda izleyin."
+    },
+    "mfc": {
+      "subtitle": "Küçük arcade tarzı oyun projesi: Mission Fried Chicken, 'görevdeki Uzay Tavuğu' temalı eğlenceli bir ortamda basit ve odaklı oynanışı birleştirir.",
+      "overview_p0": "Amaç, küçük, bütünleşik bir oyun oluştururken oyun mantığını, UI'yi ve basit animasyonları temiz bir şekilde yapılandırmaktı. Odak noktası, kontrol, duyarlılık ve zamanlama vurgusundan oluşan bir tavuk-uzay ortamıdır.",
+      "overview_p1": "Mission Fried Chicken, temel oyun döngüsü kavramlarını (güncelleme döngüsü, girdiler, çarpışma mantığı, oyun durumu) ve menü ve sahne yapısını göstermek için uygundur.",
+      "trailer_h": "Fragman & Sunum",
+      "trailer_p": "Kısa oynanış fragmanı ve oyunun fikir ve yapısını özetleyen bir sunum.",
+      "trailer_caption": "SpaceShip / Mission Fried Chicken – Oynanış Fragmanı.",
+      "link_pptx": "Mission Fried Chicken – Sunum (PPTX)"
+    },
+    "patient": {
+      "subtitle": "YOLOv5 ile düşme algılama, Docker tabanlı sunucu altyapısı ve MQTT, Matrix (sohbet) ve Raspberry Pi'da donanım alarmı aracılığıyla uyarı içeren kamera tabanlı hasta izleme sistemi.",
+      "overview_p": "Bir sistem yönetimi projesi kapsamında, düşmeleri ve kritik durumları otomatik olarak algılayan ve bakıcı personeli aktif olarak uyaran bir Hasta İzleme Sistemi uygulandı. Kameralı birden fazla Raspberry Pi yatak ve odayı izler; Docker tabanlı bir sunucu görüntüleri YOLOv5 ile işler ve durumları MQTT aracılığıyla dağıtır.",
+      "li0": "YOLOv5 tabanlı düşme algılama sistemi (yürüyor / oturuyor / düşme algılandı)",
+      "li1": "Tüm servisler için Docker & Docker-Compose kurulumu (MQTT, Matrix, Posta, YOLO)",
+      "li2": "Tüm bileşenler arasında merkezi iletişim katmanı olarak MQTT broker",
+      "li3": "Bakıcı personeline şifreli uyarı mesajları için Matrix sunucusu",
+      "li4": "Raspberry Pi aracılığıyla donanım alarmı (LED'ler, buzzer, düğme)",
+      "purpose_h": "Amaç ve Faydalar",
+      "purpose_p": "Sistemin amacı, pahalı özel çözümler gerektirmeden klinik ve bakım tesislerinde hasta güvenliğini artırmaktır. Sistem, uygun fiyatlı donanımı (Raspberry Pi) açık kaynak yazılımla (Docker, Mosquitto, Matrix, YOLOv5) birleştirir ve şunları sağlar:",
+      "purpose_li0": "Düşmelerin ve kritik durumların erken tespiti",
+      "purpose_li1": "Bakıcı personeline gerçek zamanlı bildirimler (Matrix ve e-posta)",
+      "purpose_li2": "Koğuşta doğrudan net görsel/sesli alarmlar",
+      "purpose_li3": "Kolayca genişletilebilir ve sürdürülebilir modüler bir yapı",
+      "cap0": "Sistem mimarisi: İki kamera perspektifi (yatak ve oda) bir broker aracılığıyla algılama ve uyarı bileşenlerine veri gönderir.",
+      "cap1": "Matrix sunucusu mimarisi: Bakıcı personeli için şifreli sohbet/uyarı kanalları.",
+      "cap2": "Üç sınıflı YOLOv5 düşme algılama: 'yürüyor', 'oturuyor' ve 'düşme algılandı'.",
+      "cap3": "Alarm donanımı: LED'li (Normal/Uyarı/Alarm) ve yerel sinyal için buzzer'lı Raspberry Pi."
+    },
+    "java": {
+      "subtitle": "Java'da YZ destekli yazılım testi oluşturma üzerine proje semineri: ChatGPT'nin birim, entegrasyon ve UI testleri oluşturmayı ne kadar iyi desteklediğinin değerlendirilmesi.",
+      "overview_p": "Amaç, Java'da otomatik test oluşturma için ChatGPT 4'ün potansiyelini değerlendirmekti. Birim, UI ve entegrasyon testleri için farklı gereksinimlere sahip üç örnek proje (Envanter Yöneticisi, Banka Yöneticisi, Çiftlik Ürün Mağazası) incelendi.",
+      "li0": "Kod kapsamı, hata oranı ve istem çabasının karşılaştırılması",
+      "li1": "ChatGPT ile birim, UI ve entegrasyon testlerinin oluşturulması",
+      "li2": "Testleri geliştirmek için yinelemeli istem mühendisliği",
+      "li3": "YZ destekli testin güçlü ve zayıf yönlerinin değerlendirilmesi",
+      "results_p": "Değerlendirme, ChatGPT'nin özellikle klasik birim ve entegrasyon testleri için görece az istem çabasıyla yüksek kod kapsamı elde edebildiğini göstermektedir. UI testleri için hata oranları ve düzeltme çabası artar, ancak oluşturulan sınıflar genellikle bir geliştiricinin daha da geliştirebileceği iyi bir başlangıç noktası sunar.",
+      "link_doc": "Java'da YZ Destekli Yazılım Testi Oluşturma",
+      "link_pres": "ChatGPT ile Test Oluşturma – Sunum"
+    },
+    "turtlebot": {
+      "subtitle": "ROS ve move_base yığını ile mobil robotun özerk navigasyonu — bölge konsepti, hedef seçim algoritması ve sağlam kilitlenme yönetimi dahil.",
+      "overview_p": "Amaç, bir Turtlebot'un bir arenada özerk olarak dolaşmasını sağlamaktı. Önceden oluşturulmuş bir haritaya (gmapping) ve amcl_pose lokalizasyonuna dayalı olarak robot, önceden tanımlanmış navigasyon hedeflerini sırayla ziyaret eder. Bu hedefler 'kolay' ve 'zor' bölgelere ayrılmıştır.",
+      "li0": "Tüm hedefler (koordinatlar, bölge, ödül) bir YAML dosyasında saklanır",
+      "li1": "Bir sonraki ulaşılabilir hedefi seçmek için algoritma",
+      "li2": "Aşamalı yaklaşım: önce kolay bölge, sonra zor bölge",
+      "li3": "Hedefler ve hedef listeleri için modüler sınıf yapısı",
+      "behavior_h": "Robot Davranışı ve Çözümleri",
+      "behavior_p": "Kod tabanı net sınıflara ayrılmıştır: merkezi bir Ana sınıf iş akışını kontrol ederken, Hedef ve HedefListesi sınıfları bireysel hedefleri ve tüm hedef listesini yönetir.",
+      "bli0": "Hedef Hassasiyeti: Daha yüksek harita çözünürlüğü, asıl hedeften önce yardımcı hedefler ve maliyet haritasının düzenli temizlenmesi.",
+      "bli1": "Engellenen Hedefler: 30 saniyelik zaman aşımı, ardından ikinci bir liste aracılığıyla soğuma sonrası devam.",
+      "bli2": "Kilitlenmeler: Sıkışma durumlarının tespiti ve diğer robotlara yol açmak için geri/dönüş.",
+      "bli3": "Gelecek Çalışma: Dinamik bölge stratejisi ve robotlar arasında yol açma için olası müzakere protokolleri.",
+      "hardware_h": "Donanım – Turtlebot Platformu",
+      "caption": "360° LiDAR, Raspberry Pi, OpenCR kontrolör ve DYNAMIXEL sürücülerle Turtlebot platformu – ROS ile özerk navigasyonun temeli."
+    },
+    "sicherheit": {
+      "subtitle": "Ağ güvenliği ve web uygulama güvenliği üzerine uygulamalı laboratuvar alıştırmaları — saldırı vektörlerini ve uygun karşı önlemleri anlamaya odaklanma.",
+      "overview_h": "Genel Bakış",
+      "overview_p": "Sistem Güvenliği modülünde çeşitli pratik laboratuvarlar tamamladım ve her birini ayrıntılı raporlarda belgeledim. Alıştırmalar, yapılandırılmış bir güvenlik testinin tam iş akışını kapsar — keşiften ağ analizine ve tipik web açıklarına kadar.",
+      "lab_h": "Laboratuvar İçerikleri",
+      "li_recon": "Temel Bilgiler ve Keşif: güvenlik laboratuvarı ortamında çalışma, OSINT, port tarama ve servis numaralandırma.",
+      "li_network": "Ağ Güvenliği: izole bir test ortamında ağlara yönelik güvenlik duvarlarının analizi ve yapılandırması ile seçilmiş saldırılar.",
+      "li_web": "Web Uygulama Güvenliği: LFI, SQL Injection, XSS, OS Komut Enjeksiyonu, SSRF gibi açıkların incelenmesi ve savunmasız CMS'lere saldırılar.",
+      "li_exploit": "Sömürü ve Sertleştirme: laboratuvar ortamında kabuk oluşturma, açıkların belgelenmesi ve uygun koruma önlemlerinin türetilmesi.",
+      "lab_note": "Tüm alıştırmalar kontrollü bir laboratuvar ortamında gerçekleşti. Amaç, saldırı yollarını anlamak ve bir güvenlik zihniyeti geliştirmekti.",
+      "role_h": "Rol ve Öğrenme Hedefleri",
+      "role_p": "Pratik görevler ve yazılı raporların kombinasyonu sayesinde saldırı ve savunma mekanizmaları hakkındaki anlayışımı önemli ölçüde derinleştirebildim:",
+      "role_li0": "Güvenlik analizlerine sistematik yaklaşım (Keşif → Sömürü → Sertleştirme).",
+      "role_li1": "Tipik web ve ağ açıklarını güvenle yönetme.",
+      "role_li2": "Güvenlik bilgisinin sorumlu ve etik kullanımına dair farkındalık."
     }
-  },
-  "technologies": {
-    "title": "Teknolojiler ve Yetenekler"
   },
   "resume": {
     "title": "Özgeçmiş (PDF)",
@@ -44,5 +346,9 @@
   "contact": {
     "title": "İletişim",
     "intro": "Bana şu kanallardan ulaşabilirsiniz:"
+  },
+  "footer": {
+    "copyright": "© {{year}} Emircan Tutar",
+    "built_with": "React ile yapıldı · Koyu Tema"
   }
 }

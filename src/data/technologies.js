@@ -1,34 +1,34 @@
 const technologies = [
   {
-    group: "Programmiersprachen – Fortgeschritten",
+    groupKey: "technologies.groups.lang_advanced",
     items: ["C", "C++", "Java", "Python"]
   },
   {
-    group: "Programmiersprachen – Gute Kenntnisse",
+    groupKey: "technologies.groups.lang_good",
     items: ["C#", "SQL", "JavaScript"]
   },
   {
-    group: "Programmiersprachen – Grundlagen",
+    groupKey: "technologies.groups.lang_basic",
     items: ["PHP", "Assembler", "HTML", "CSS"]
   },
   {
-    group: "Frameworks & Libraries",
+    groupKey: "technologies.groups.frameworks",
     items: ["React", "Vue.js", "Node.js", "ROS", "eCAL", "Robot Framework"]
   },
   {
-    group: "DevOps, Cloud & CI",
+    groupKey: "technologies.groups.devops",
     items: ["Docker", "Kubernetes", "Jenkins", "Azure DevOps", "Microsoft Azure"]
   },
   {
-    group: "Build- & Projekt-Tools",
+    groupKey: "technologies.groups.build_tools",
     items: ["CMake", "Maven", "Git", "Jira"]
   },
   {
-    group: "Datenbanken & Tools",
+    groupKey: "technologies.groups.databases",
     items: ["Oracle SQL Developer"]
   },
   {
-    group: "IDEs & Editoren",
+    groupKey: "technologies.groups.ides",
     items: ["Visual Studio", "VS Code", "CLion", "IntelliJ", "PyCharm", "Android Studio"]
   },
 ]
