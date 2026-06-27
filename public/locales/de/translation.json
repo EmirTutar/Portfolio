@@ -128,7 +128,16 @@
       "devops": "DevOps, Cloud & CI",
       "build_tools": "Build- & Projekt-Tools",
       "databases": "Datenbanken & Tools",
-      "ides": "IDEs & Editoren"
+      "ides": "IDEs & Editoren",
+      "languages": "Programmiersprachen",
+      "tools": "Build- & Projekt-Tools"
+    },
+    "subtitle": "Meine aktuellen technischen Kenntnisse, Werkzeuge und Wissensgebiete.",
+    "level": {
+      "1": "Grundkenntnisse",
+      "2": "Gute Kenntnisse",
+      "3": "Fortgeschritten",
+      "4": "Experte"
     }
   },
   "projects": {
@@ -138,7 +147,8 @@
       "all": "Alle",
       "work": "Arbeit",
       "study": "Studium",
-      "private": "Privat"
+      "private": "Privat",
+      "all_tech": "Alle Tech"
     },
     "effort_label": "Aufwand",
     "category_work": "Berufliches Projekt",

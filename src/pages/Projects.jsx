@@ -1,36 +1,29 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import projects from '../data/projects'
 
-function Effort({ level = 0, max = 5, label }) {
-  const safeLevel = Math.min(Math.max(level, 0), max)
-
-  return (
-    <div className="Effort">
-      <span className="Effort-label">{label}:&nbsp;</span>
-      {Array.from({ length: max }).map((_, i) => (
-        <span
-          key={i}
-          className={i < safeLevel ? 'star star-fill' : 'star star-empty'}
-        >
-          ★
-        </span>
-      ))}
-    </div>
-  )
-}
+const ALL_TECHS = [...new Set(projects.flatMap(p => p.technologies))].sort()
 
 export default function Projects() {
   const { t } = useTranslation()
-  const [filter, setFilter] = useState('all')
+  const [catFilter, setCatFilter] = useState('all')
+  const [techFilter, setTechFilter] = useState(null)
 
-  const filtered = projects.filter(p =>
-    filter === 'all' ? true : p.category === filter
+  const filtered = useMemo(() =>
+    projects.filter(p => {
+      const catOk = catFilter === 'all' || p.category === catFilter
+      const techOk = !techFilter || p.technologies.includes(techFilter)
+      return catOk && techOk
+    }),
+    [catFilter, techFilter]
   )
 
-  const getButtonClass = key =>
-    `btn btn--ghost${filter === key ? ' btn--active' : ''}`
+  const catBtn = (key) =>
+    `btn btn--ghost${catFilter === key ? ' btn--active' : ''}`
+
+  const techBtn = (tech) =>
+    `tech-chip${techFilter === tech ? ' tech-chip--active' : ''}`
 
   const categoryLabel = (cat) => {
     if (cat === 'work')    return t('projects.category_work')
@@ -42,25 +35,41 @@ export default function Projects() {
   return (
     <section>
       <h1 className="section-title">{t('projects.title')}</h1>
-      <p className="muted" style={{ marginBottom: '1rem' }}>
+      <p className="muted" style={{ marginBottom: '1.25rem' }}>
         {t('projects.subtitle')}
       </p>
 
+      {/* ── category filter ── */}
       <div className="toolbar" style={{ marginBottom: '1rem' }}>
-        <button type="button" className={getButtonClass('all')} onClick={() => setFilter('all')}>
-          {t('projects.filter.all')}
-        </button>
-        <button type="button" className={getButtonClass('work')} onClick={() => setFilter('work')}>
-          {t('projects.filter.work')}
-        </button>
-        <button type="button" className={getButtonClass('study')} onClick={() => setFilter('study')}>
-          {t('projects.filter.study')}
-        </button>
-        <button type="button" className={getButtonClass('private')} onClick={() => setFilter('private')}>
-          {t('projects.filter.private')}
-        </button>
+        {['all', 'work', 'study', 'private'].map(key => (
+          <button key={key} type="button" className={catBtn(key)} onClick={() => setCatFilter(key)}>
+            {t(`projects.filter.${key}`)}
+          </button>
+        ))}
       </div>
 
+      {/* ── technology chip filter ── */}
+      <div className="tech-chip-bar" style={{ marginBottom: '1.75rem' }}>
+        <button
+          type="button"
+          className={`tech-chip${!techFilter ? ' tech-chip--active' : ''}`}
+          onClick={() => setTechFilter(null)}
+        >
+          {t('projects.filter.all_tech')}
+        </button>
+        {ALL_TECHS.map(tech => (
+          <button
+            key={tech}
+            type="button"
+            className={techBtn(tech)}
+            onClick={() => setTechFilter(prev => prev === tech ? null : tech)}
+          >
+            {tech}
+          </button>
+        ))}
+      </div>
+
+      {/* ── project grid ── */}
       <div className="grid grid-2 grid-projects">
         {filtered.map(project => (
           <Link
@@ -68,30 +77,32 @@ export default function Projects() {
             to={`/projects/${project.id}`}
             className="card project-card"
           >
-            <h2 style={{ marginTop: 0, marginBottom: '.25rem' }}>
-              {t(project.titleKey)}
-            </h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.3rem' }}>
+              <h2 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, lineHeight: 1.35 }}>
+                {t(project.titleKey)}
+              </h2>
+              <span className={`home-proj-badge home-proj-badge--${project.category}`} style={{ flexShrink: 0 }}>
+                {categoryLabel(project.category)}
+              </span>
+            </div>
 
-            {typeof project.Effort === 'number' && (
-              <Effort level={project.Effort} label={t('projects.effort_label')} />
-            )}
-
-            <p className="muted" style={{ marginBottom: '.6rem', marginTop: '.25rem' }}>
+            <p className="muted" style={{ marginBottom: '0.75rem', marginTop: '0.25rem', fontSize: '0.875rem' }}>
               {t(project.descriptionKey)}
             </p>
 
-            <div style={{ marginBottom: '.6rem' }}>
-              {project.technologies?.slice(0, 5).map(tech => (
-                <span key={tech} className="tag">{tech}</span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
+              {project.technologies?.slice(0, 6).map(tech => (
+                <span
+                  key={tech}
+                  className={`tag${techFilter === tech ? ' tag--active' : ''}`}
+                >
+                  {tech}
+                </span>
               ))}
-              {project.technologies?.length > 5 && (
-                <span className="tag">+{project.technologies.length - 5}</span>
+              {project.technologies?.length > 6 && (
+                <span className="tag">+{project.technologies.length - 6}</span>
               )}
             </div>
-
-            <p className="muted" style={{ fontSize: '.85rem' }}>
-              {categoryLabel(project.category)}
-            </p>
           </Link>
         ))}
 

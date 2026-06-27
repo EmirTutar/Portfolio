@@ -128,7 +128,16 @@
       "devops": "DevOps, Bulut & CI",
       "build_tools": "Derleme & Proje Araçları",
       "databases": "Veritabanları & Araçlar",
-      "ides": "IDE'ler & Editörler"
+      "ides": "IDE'ler & Editörler",
+      "languages": "Programlama Dilleri",
+      "tools": "Derleme & Proje Araçları"
+    },
+    "subtitle": "Mevcut teknik becerilerim, araçlarım ve bilgi alanlarım.",
+    "level": {
+      "1": "Temel",
+      "2": "İyi",
+      "3": "İleri",
+      "4": "Uzman"
     }
   },
   "projects": {
@@ -138,7 +147,8 @@
       "all": "Tümü",
       "work": "İş",
       "study": "Öğrenim",
-      "private": "Özel"
+      "private": "Özel",
+      "all_tech": "Tüm Teknoloji"
     },
     "effort_label": "Çaba",
     "category_work": "İş Projesi",

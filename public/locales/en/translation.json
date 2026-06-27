@@ -128,7 +128,16 @@
       "devops": "DevOps, Cloud & CI",
       "build_tools": "Build & Project Tools",
       "databases": "Databases & Tools",
-      "ides": "IDEs & Editors"
+      "ides": "IDEs & Editors",
+      "languages": "Programming Languages",
+      "tools": "Build & Project Tools"
+    },
+    "subtitle": "My current technical skills, tools, and knowledge areas.",
+    "level": {
+      "1": "Basic",
+      "2": "Intermediate",
+      "3": "Advanced",
+      "4": "Expert"
     }
   },
   "projects": {
@@ -138,7 +147,8 @@
       "all": "All",
       "work": "Work",
       "study": "Study",
-      "private": "Private"
+      "private": "Private",
+      "all_tech": "All Tech"
     },
     "effort_label": "Effort",
     "category_work": "Work Project",
