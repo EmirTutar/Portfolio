@@ -4,6 +4,8 @@
     "timeline": "Zaman Çizelgesi",
     "projects": "Projeler",
     "technologies": "Teknolojiler",
+    "blog": "Blog",
+    "impossible_list": "İmkânsız Liste",
     "resume": "Özgeçmiş",
     "contact": "İletişim"
   },
@@ -18,6 +20,20 @@
     "github_repo": "GitHub Deposu"
   },
   "home": {
+    "timeline_sub": "İş deneyimim ve eğitimime kronolojik bir bakış.",
+    "timeline_full": "Tam Zaman Çizelgesi",
+    "all_projects": "Tüm Projeler",
+    "stats": {
+      "projects": "Proje",
+      "internships": "Staj",
+      "years": "Yıl Kodlama",
+      "degree": "Derece"
+    },
+    "cta": {
+      "title": "Birlikte çalışalım.",
+      "subtitle": "Yeni fırsatlara açığım — staj, öğrenci asistanlığı veya freelance projeler.",
+      "btn": "İletişime geç"
+    },
     "title": "Portföyüme hoş geldiniz",
     "subtitle": "Yazılım geliştirme, test otomasyonu ve çeşitli yazılım projeleri",
     "hero": {
@@ -350,5 +366,18 @@
   "footer": {
     "copyright": "© {{year}} Emircan Tutar",
     "built_with": "React ile yapıldı · Koyu Tema"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Yazılım geliştirme, projeler ve öğrendiklerim hakkında yazılar.",
+    "min_read": "dk okuma",
+    "read_more": "Devamını oku",
+    "back": "Blog'a dön"
+  },
+  "impossible": {
+    "title": "İmkânsız Liste",
+    "subtitle": "Bir kova listesi değil — üzerinde çalıştığım deneyimler, beceriler ve kilometre taşlarından oluşan büyüyen bir liste. Joel Runyon'dan ilham alındı.",
+    "progress": "Genel ilerleme",
+    "complete": "tamamlandı"
   }
 }

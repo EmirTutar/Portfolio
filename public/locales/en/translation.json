@@ -4,6 +4,8 @@
     "timeline": "Timeline",
     "projects": "Projects",
     "technologies": "Technologies",
+    "blog": "Blog",
+    "impossible_list": "Impossible List",
     "resume": "Resume",
     "contact": "Contact"
   },
@@ -20,6 +22,20 @@
   "home": {
     "title": "Welcome to my portfolio",
     "subtitle": "Software development, test automation and diverse software projects",
+    "timeline_sub": "A chronological overview of my work experience and education.",
+    "timeline_full": "Full Timeline",
+    "all_projects": "All Projects",
+    "stats": {
+      "projects": "Projects",
+      "internships": "Internships",
+      "years": "Years Coding",
+      "degree": "Degree"
+    },
+    "cta": {
+      "title": "Let's work together.",
+      "subtitle": "I'm open to new opportunities — internships, working student roles, or freelance projects.",
+      "btn": "Get in touch"
+    },
     "hero": {
       "greeting": "Hi, I'm",
       "badge": "Software Developer",
@@ -350,5 +366,18 @@
   "footer": {
     "copyright": "© {{year}} Emircan Tutar",
     "built_with": "Built with React · Dark Theme"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Writing about software development, projects, and things I'm learning along the way.",
+    "min_read": "min read",
+    "read_more": "Read more",
+    "back": "Back to Blog"
+  },
+  "impossible": {
+    "title": "Impossible List",
+    "subtitle": "Not a bucket list — an ever-growing list of experiences, skills and milestones I'm working towards. Inspired by Joel Runyon.",
+    "progress": "Overall progress",
+    "complete": "complete"
   }
 }

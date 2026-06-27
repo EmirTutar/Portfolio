@@ -4,6 +4,8 @@
     "timeline": "Zeitstrahl",
     "projects": "Projekte",
     "technologies": "Technologien",
+    "blog": "Blog",
+    "impossible_list": "Impossible List",
     "resume": "Lebenslauf",
     "contact": "Kontakt"
   },
@@ -20,6 +22,20 @@
   "home": {
     "title": "Willkommen in meinem Portfolio",
     "subtitle": "Softwareentwicklung, Testautomatisierung und vielseitige Softwareprojekte",
+    "timeline_sub": "Ein chronologischer Überblick über meine Berufserfahrung und Ausbildung.",
+    "timeline_full": "Vollständiger Zeitstrahl",
+    "all_projects": "Alle Projekte",
+    "stats": {
+      "projects": "Projekte",
+      "internships": "Praktika",
+      "years": "Jahre Coding",
+      "degree": "Abschluss"
+    },
+    "cta": {
+      "title": "Lass uns zusammenarbeiten.",
+      "subtitle": "Ich bin offen für neue Möglichkeiten — Praktika, Werkstudentenstellen oder Freelance-Projekte.",
+      "btn": "Kontakt aufnehmen"
+    },
     "hero": {
       "greeting": "Hallo, ich bin",
       "badge": "Softwareentwickler",
@@ -350,5 +366,18 @@
   "footer": {
     "copyright": "© {{year}} Emircan Tutar",
     "built_with": "Erstellt mit React · Dark Theme"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Beiträge über Softwareentwicklung, Projekte und was ich dabei lerne.",
+    "min_read": "Min. Lesezeit",
+    "read_more": "Weiterlesen",
+    "back": "Zurück zum Blog"
+  },
+  "impossible": {
+    "title": "Impossible List",
+    "subtitle": "Keine Bucket-List — eine wachsende Liste von Erfahrungen, Fähigkeiten und Meilensteinen, an denen ich arbeite. Inspiriert von Joel Runyon.",
+    "progress": "Gesamtfortschritt",
+    "complete": "abgeschlossen"
   }
 }

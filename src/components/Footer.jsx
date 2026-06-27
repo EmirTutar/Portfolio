@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className="container" style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'1rem'}}>
+      <div className="footer-inner">
         <div>{t('footer.copyright', { year })}</div>
         <div className="muted">{t('footer.built_with')}</div>
       </div>
