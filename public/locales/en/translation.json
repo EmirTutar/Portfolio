@@ -160,43 +160,43 @@
     "data": {
       "ecal_test_suite": {
         "title": "eCAL Test Suite – IPC Integration Testing",
-        "description": "Automated integration tests for the eCAL IPC middleware using Docker and Robot Framework (Pub/Sub, RPC, fault scenarios, CI)."
+        "description": "Bachelor thesis project: Docker + Robot Framework integration tests for eCAL IPC middleware, covering Pub/Sub, RPC and fault scenarios with full CI/CD automation."
       },
       "personal_site": {
         "title": "Personal Portfolio Website",
-        "description": "Multilingual developer portfolio (EN/DE/TR) with dark theme, routing, i18n and embedded PDF résumé, deployed via GitHub Pages."
+        "description": "Multilingual React SPA (DE/EN/TR) with dark theme, animated timeline, project showcase, tech stack overview and an embedded PDF résumé — deployed on GitHub Pages."
       },
       "rateme": {
         "title": "RateMe – Android Product Rating App",
-        "description": "Android app for scanning barcodes, displaying product info and saving ratings in Firebase."
+        "description": "Android app: scan a barcode to get product info, community ratings and comments. Built on Firebase Auth + Firestore with favourites list and scan history."
       },
       "outdoor_planner": {
         "title": "Outdoor Planner – Weather-Aware Scheduler",
-        "description": "Web app that combines event planning with live weather data to support outdoor activities and avoid bad-weather appointments."
+        "description": "Vue.js SPA that pairs a 14-day weather forecast (Open-Meteo API) with an appointment manager — so outdoor events are never booked on a rainy day."
       },
       "turtlebot": {
         "title": "Autonomous Turtlebot Navigation",
-        "description": "ROS project enabling a mobile robot to autonomously navigate to predefined goals using navigation stack and costmaps."
+        "description": "ROS Noetic navigation stack enabling a TurtleBot to autonomously reach zone-based goals with deadlock detection, timeout recovery and costmap clearing."
       },
       "patient_monitoring": {
         "title": "Patient Monitoring Prototype",
-        "description": "Camera-based fall and bed monitoring with Docker, MQTT and Raspberry Pi."
+        "description": "7-container Docker Compose system: YOLOv5 detects falls in real time, MQTT routes events to Matrix chat, email and a Raspberry Pi hardware alarm."
       },
       "systemsicherheit": {
         "title": "System Security – Practical Labs",
-        "description": "Hands-on exercises on attack vectors and defenses: from OSINT and port scanning to web vulnerabilities and network attacks."
+        "description": "Lab exercises covering the full offensive-defensive workflow: OSINT, port scanning, network attacks, LFI/SQLi/XSS web vulnerabilities, exploitation and hardening."
       },
       "mfc": {
-        "title": "Mission Fried Chicken",
-        "description": "Game project developed during studies; small gameplay prototype focused on experimenting with game mechanics and implementation."
+        "title": "Mission Fried Chicken – C# Game",
+        "description": "Arcade-style C# game prototype: a space chicken on a mission. Demonstrates a clean game loop, responsive controls and structured scene management."
       },
       "java_testing": {
         "title": "AI-Assisted Java Software Testing",
-        "description": "Project work on using ChatGPT to generate software tests for Java projects and evaluating the quality and efficiency of the generated tests."
+        "description": "Academic research evaluating ChatGPT-4 for automated Java test generation — measuring coverage, error rates and prompt effort across unit, integration and UI tests."
       },
       "radar_game": {
         "title": "RadarGame – C# Game Prototype",
-        "description": "C# game prototype exploring radar-style visuals, rendering and basic game engine structures."
+        "description": "C# game prototype where a spaceship navigates via a radar-style interface. Custom GLSL shaders power the visuals with a clean update/collision game loop."
       }
     },
     "detail": {
@@ -275,8 +275,8 @@
       "overview_p0": "The app combines weather queries and appointment management: the home page displays current weather (icon, temperature, rain risk) for Weingarten. In the outdoor planner, users can create their own appointments, mark them as all-day, and manage them.",
       "overview_p1": "Each appointment consists of a title, date, optional time, description, and whether it is all-day. Appointments can be saved and deleted. The layout is deliberately clear so that a good overview is maintained even on smaller screens.",
       "tech_h": "Technology",
-      "li0": "React Single Page Application with simple routing",
-      "li1": "Weather data via an external weather API (e.g. OpenWeatherMap)",
+      "li0": "Vue.js Single Page Application with component-based architecture",
+      "li1": "Weather data via Open-Meteo REST API (free, no key required) using Axios",
       "li2": "State management with React Hooks for appointment list and forms",
       "li3": "Responsive layout with CSS for desktop view",
       "screenshots_p": "Views of the home screen and outdoor planner.",
