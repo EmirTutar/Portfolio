@@ -1,1 +1,0 @@
-Alles im Projekt muss in 3 Sprachen Englisch, Deutsch, Türkisch übersetzt werden.
