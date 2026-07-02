@@ -59,50 +59,50 @@
     "section_education": "Eğitim",
     "exp": {
       "0": {
-        "title": "Bitirme Tezi: IPC Ara Yazılımın Otomatik Testi",
+        "title": "Yazılım Test Mühendisi (Bitirme Tezi dahil)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Bitirme tezi: eCAL ile Gösterilen IPC Ara Yazılımı İçin Otomatik Test Konsepti Geliştirme",
-        "d1": "IPC ara yazılımı için otomatik test çerçevesinin tasarımı ve uygulanması",
-        "d2": "Docker ve Robot Framework tabanlı entegrasyon testlerinin uygulanması",
-        "d3": "Test senaryolarının tasarımı (Pub/Sub, RPC, çöküş ve ağ hatası senaryoları)",
-        "d4": "GitHub Actions ile CI/CD hattına entegrasyon"
+        "d0": "eCAL IPC ara yazılımı için tam otomatik test çerçevesi geliştirildi — manuel regresyon testi ~%70 azaldı.",
+        "d1": "SHM, UDP ve TCP üzerinden Pub/Sub, RPC, çöküş ve ağ hatası senaryoları için Docker + Robot Framework entegrasyon testleri oluşturuldu.",
+        "d2": "CI pipeline'ları için standartlaştırılmış, izole, paralel çalıştırılabilir yapıda ~40 test senaryosu tasarlandı.",
+        "d3": "GitHub Actions CI/CD'ye test yürütme entegre edildi — hatalar sprint sonu yerine commit anında yakalanıyor.",
+        "d4": "Test raporları otomatik olarak GitHub Pages'e yayımlandı."
       },
       "1": {
-        "title": "Zorunlu Staj: Yazılım Devreye Alma ve Test",
+        "title": "Yazılım Mühendisi – Yazılım Devreye Alma ve Test (Staj Dönemi)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Sensör veri işleme ve IPC için yazılım ve donanım bileşenlerinin entegrasyonu ve devreye alınması",
-        "d1": "C++ ve Python'da yazılım modüllerinin geliştirilmesi ve optimizasyonu",
-        "d2": "eCAL ara yazılımının kullanımı (yayıncı-abone modeli)",
-        "d3": "Simülasyon ve araçta test ve doğrulama",
-        "d4": "Jenkins ile derleme ve test süreçlerinin otomasyonu (CI/CD)"
+        "d0": "Sensör veri işleme ve süreçlerarası iletişim (IPC) için yazılım ve donanım bileşenleri entegre edildi.",
+        "d1": "C++ ve Python modülleri geliştirildi ve optimize edildi; pipeline çalışma süresi ve bakımı iyileştirildi.",
+        "d2": "eCAL ara yazılımı (yayıncı–abone modeli) uygulandı; simülasyonda ve gerçek test sürüşlerinde doğrulama yapıldı.",
+        "d3": "Jenkins ile derleme ve test süreçleri otomatikleştirildi (CI/CD), manuel derlemeler büyük ölçüde ortadan kaldırıldı.",
+        "d4": "Scrum Master yokken 8 kişilik ekip için günlük stand-up toplantıları yönetildi."
       },
       "2": {
-        "title": "Öğretim Asistanı – Programlama (Java Laboratuvarı)",
+        "title": "Java Programlama Öğretim Asistanı",
         "org": "RWU – Ravensburg Weingarten University, Weingarten",
-        "d0": "Java laboratuvarı dersinde öğrencilerin gözetimi",
-        "d1": "Uygulama, hata ayıklama ve sorun giderme konusunda destek",
-        "d2": "Temel programlama kavramları ve en iyi uygulamaların öğretilmesi"
+        "d0": "Öğrencilere Java laboratuvar ödevleri, hata ayıklama ve sorun gidermede destek sağlandı.",
+        "d1": "Temel programlama ve nesne yönelimli tasarım kavramları öğretildi.",
+        "d2": "Öğrencilerin çözümlerini yapılandırmasına ve en iyi uygulamaları anlamasına yardım edildi."
       },
       "3": {
-        "title": "Üretim Yardımcısı",
+        "title": "Üretim ve Montaj Asistanı",
         "org": "ZF Friedrichshafen, Friedrichshafen",
-        "d0": "Seri üretimde gezegen taşıyıcıların kalite güvencesi",
-        "d1": "KUKA robotların çalıştırılması ve basit bakımı",
-        "d2": "Pres makineleri: kurulum ve presleme işlemlerinin gerçekleştirilmesi"
+        "d0": "Seri üretimde gezegen taşıyıcıların kalite güvencesi.",
+        "d1": "KUKA robotları ve pres makineleri çalıştırıldı ve bakımı yapıldı.",
+        "d2": "Birden fazla görev dönemi: 2021, 2022, 2023 ve 2026."
       },
       "4": {
         "title": "Staj: Elektronik Teknisyeni (Otomasyon Teknolojisi)",
         "org": "BWC Lindau, Lindau",
-        "d0": "Kontrol panellerinin otomasyonu ve optimizasyonuna yardım",
-        "d1": "Kontrol panellerinin yapımı ve programlanması"
+        "d0": "Kontrol panellerinin otomasyonu ve optimizasyonuna destek verildi.",
+        "d1": "Kontrol paneli sistemleri kuruldu ve programlandı."
       }
     },
     "edu": {
       "0": {
         "title": "Uygulamalı Bilgisayar Bilimleri, B.Sc.",
-        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "org": "Ravensburg Weingarten University, Weingarten",
         "d0": "Uzmanlık: Robotik & Akıllı Cihazlar",
-        "d1": "Güncel not ortalaması: 2,4 (Alman sistemi)"
+        "d1": "Mezuniyet notu: 2,3 (Alman sistemi)"
       },
       "1": {
         "title": "Teknik Lise Diploması (Teknoloji)",

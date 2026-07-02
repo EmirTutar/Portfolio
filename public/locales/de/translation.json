@@ -59,50 +59,50 @@
     "section_education": "Ausbildung",
     "exp": {
       "0": {
-        "title": "Bachelorarbeit: Automated Testing of IPC Middleware",
+        "title": "Software Test Engineer (inkl. Bachelorarbeit)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Bachelorarbeit: Developing a Concept for Automated Testing of IPC Middleware – Demonstrated with eCAL",
-        "d1": "Konzeption und Umsetzung eines automatisierten Testframeworks für IPC-Middleware",
-        "d2": "Implementierung Docker- und Robot-Framework-basierter Integrationstests",
-        "d3": "Gestaltung von Testfällen (Publish/Subscribe, RPC, Crash- und Network-Failure-Szenarien)",
-        "d4": "Einbindung in eine CI/CD-Pipeline mit GitHub Actions"
+        "d0": "Entwicklung eines vollautomatischen Testframeworks für eCAL-IPC-Middleware — manuelle Regressionstests um ~70 % reduziert und vollständig reproduzierbar gemacht.",
+        "d1": "Aufbau von Docker + Robot-Framework-Integrationstests für Pub/Sub, RPC, Crash- und Netzwerkausfall-Szenarien über SHM, UDP und TCP.",
+        "d2": "Entwurf von ~40 Testfällen mit standardisierter, isolierter, parallelisierbarer Struktur für CI-Pipelines.",
+        "d3": "Testausführung in GitHub-Actions-CI/CD integriert — Fehler werden zur Commit-Zeit erkannt statt am Sprintende.",
+        "d4": "Testberichte automatisch auf GitHub Pages veröffentlicht für transparente, jederzeit zugängliche Ergebnisse."
       },
       "1": {
-        "title": "Pflichtpraktikum: Software Bring Up and Test",
+        "title": "Software Engineer – Software Bring-Up & Test (Praktikumssemester)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Integration und Inbetriebnahme von Software- und Hardwarekomponenten für Sensordatenverarbeitung und IPC",
-        "d1": "Entwicklung und Optimierung von Softwaremodulen in C++ und Python",
-        "d2": "Einsatz der eCAL-Middleware (Publisher-Subscriber-Modell)",
-        "d3": "Tests und Validierungen in Simulation und Fahrzeug",
-        "d4": "Nutzung von Jenkins zur Automatisierung von Build- und Testprozessen (CI/CD)"
+        "d0": "Integration von Software- und Hardwarekomponenten für Sensordatenverarbeitung und Interprozesskommunikation (IPC).",
+        "d1": "Entwicklung und Optimierung von C++- und Python-Modulen zur Verbesserung von Laufzeit und Wartbarkeit.",
+        "d2": "Einsatz der eCAL-Middleware (Publisher–Subscriber-Modell); Validierung in Simulation und Realfahrt.",
+        "d3": "Automatisierung von Build- und Testprozessen mit Jenkins (CI/CD), manuelle Builds weitgehend eliminiert.",
+        "d4": "Tägliche Stand-ups für ein 8-köpfiges Team geleitet als stellvertretender Scrum Master."
       },
       "2": {
-        "title": "Tutor – Programmieren (Java-Praktikum)",
+        "title": "Tutor – Java-Programmierung",
         "org": "RWU – Ravensburg Weingarten University, Weingarten",
-        "d0": "Betreuung von Studierenden im Java-Praktikum",
-        "d1": "Unterstützung bei Implementierung, Debugging und Fehlersuche",
-        "d2": "Vermittlung zentraler Programmierkonzepte und Best Practices"
+        "d0": "Betreuung von Studierenden bei Java-Praktikumsaufgaben, Debugging und Fehlersuche.",
+        "d1": "Vermittlung von Kernkonzepten der Programmierung und objektorientiertem Design.",
+        "d2": "Unterstützung der Studierenden beim Strukturieren ihrer Lösungen und Anwenden von Best Practices."
       },
       "3": {
-        "title": "Aushilfe in der Produktion",
+        "title": "Produktions- und Montagehelfer",
         "org": "ZF Friedrichshafen, Friedrichshafen",
-        "d0": "Qualitätssicherung von Planetenträgern in der Serienfertigung",
-        "d1": "Bedienung und einfache Wartung von KUKA-Robotern",
-        "d2": "Mitarbeit an Pressmaschinen: Einrichtung und Durchführung von Pressvorgängen"
+        "d0": "Qualitätssicherung von Planetenträgern in der Serienfertigung.",
+        "d1": "Bedienung und Wartung von KUKA-Robotern und Pressmaschinen.",
+        "d2": "Mehrere Einsätze: 2021, 2022, 2023 und 2026."
       },
       "4": {
         "title": "Praktikum: Elektroniker (Automatisierungstechnik)",
         "org": "BWC Lindau, Lindau",
-        "d0": "Mitarbeit bei der Automatisierung und Optimierung von Schaltschränken",
-        "d1": "Bau und Programmierung von Schaltschränken"
+        "d0": "Mitarbeit bei der Automatisierung und Optimierung von Schaltschränken.",
+        "d1": "Bau und Programmierung von Schaltschranksystemen."
       }
     },
     "edu": {
       "0": {
         "title": "Angewandte Informatik, B.Sc.",
-        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "org": "Ravensburg Weingarten University, Weingarten",
         "d0": "Vertiefung: Robotik & Smart Devices",
-        "d1": "Aktueller Notendurchschnitt: 2,4"
+        "d1": "Abschlussnote: 2,3"
       },
       "1": {
         "title": "Fachabitur (Technik)",

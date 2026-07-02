@@ -21,7 +21,7 @@ const timeline = {
     {
       titleKey: "timeline.exp.3.title",
       orgKey:   "timeline.exp.3.org",
-      period: "09/2021–10/2021, 08/2022–09/2022, 08/2023–10/2023",
+      period: "09/2021–10/2021, 08/2022–09/2022, 08/2023–10/2023, 05/2026–08/2026",
       detailKeys: ["timeline.exp.3.d0","timeline.exp.3.d1","timeline.exp.3.d2"]
     },
     {

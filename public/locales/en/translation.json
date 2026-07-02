@@ -59,50 +59,50 @@
     "section_education": "Education",
     "exp": {
       "0": {
-        "title": "Bachelor Thesis: Automated Testing of IPC Middleware",
+        "title": "Software Test Engineer (incl. Bachelor's Thesis)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Bachelor thesis: Developing a Concept for Automated Testing of IPC Middleware – Demonstrated with eCAL",
-        "d1": "Design and implementation of an automated test framework for IPC middleware",
-        "d2": "Implementation of Docker- and Robot Framework-based integration tests",
-        "d3": "Design of test cases (Publish/Subscribe, RPC, crash and network failure scenarios)",
-        "d4": "Integration into a CI/CD pipeline with GitHub Actions"
+        "d0": "Developed a fully automated test framework for eCAL IPC middleware — cutting manual regression testing by ~70% and making results fully reproducible.",
+        "d1": "Built Docker + Robot Framework integration tests for Pub/Sub, RPC, crash and network-failure scenarios across SHM, UDP and TCP transport layers.",
+        "d2": "Designed ~40 test cases with a standardized, isolated, parallelizable structure ready for CI pipelines.",
+        "d3": "Integrated test execution into GitHub Actions CI/CD — errors caught at commit time instead of end-of-sprint.",
+        "d4": "Test reports automatically deployed to GitHub Pages for transparent, always-accessible results."
       },
       "1": {
-        "title": "Mandatory Internship: Software Bring Up and Test",
+        "title": "Software Engineer – Software Bring-Up & Test (Internship)",
         "org": "Continental — ADC Automotive Distance Control Systems, Lindau",
-        "d0": "Integration and commissioning of software and hardware components for sensor data processing and IPC",
-        "d1": "Development and optimization of software modules in C++ and Python",
-        "d2": "Use of eCAL middleware (publisher-subscriber model)",
-        "d3": "Testing and validation in simulation and vehicle",
-        "d4": "Use of Jenkins for build and test process automation (CI/CD)"
+        "d0": "Integrated software and hardware components for sensor data processing and inter-process communication (IPC).",
+        "d1": "Developed and optimized C++ and Python modules, improving pipeline runtime and maintainability.",
+        "d2": "Applied eCAL middleware (publisher–subscriber model); validated software in simulation and on real test drives.",
+        "d3": "Automated build and test processes with Jenkins (CI/CD), largely eliminating manual builds.",
+        "d4": "Led daily stand-ups for an 8-person team as acting Scrum Master."
       },
       "2": {
-        "title": "Tutor – Programming (Java Lab)",
+        "title": "Java Programming Tutor",
         "org": "RWU – Ravensburg Weingarten University, Weingarten",
-        "d0": "Supervision of students in the Java lab course",
-        "d1": "Support with implementation, debugging and troubleshooting",
-        "d2": "Teaching core programming concepts and best practices"
+        "d0": "Supported students with practical Java lab exercises, debugging and troubleshooting.",
+        "d1": "Taught core programming and object-oriented design concepts.",
+        "d2": "Helped students structure their solutions and understand software engineering best practices."
       },
       "3": {
-        "title": "Production Assistant",
+        "title": "Production and Assembly Assistant",
         "org": "ZF Friedrichshafen, Friedrichshafen",
-        "d0": "Quality assurance of planet carriers in series production",
-        "d1": "Operation and basic maintenance of KUKA robots",
-        "d2": "Work on press machines: setup and execution of pressing operations"
+        "d0": "Quality assurance of planetary carriers in series production.",
+        "d1": "Operated and maintained KUKA robots and press machines.",
+        "d2": "Multiple assignments: 2021, 2022, 2023 and 2026."
       },
       "4": {
         "title": "Internship: Electronics Technician (Automation Technology)",
         "org": "BWC Lindau, Lindau",
-        "d0": "Assistance with automation and optimization of control cabinets",
-        "d1": "Construction and programming of control cabinets"
+        "d0": "Assisted with automation and optimization of control cabinets.",
+        "d1": "Built and programmed control cabinet systems."
       }
     },
     "edu": {
       "0": {
         "title": "Applied Computer Science, B.Sc.",
-        "org": "RWU – Ravensburg Weingarten University, Weingarten",
+        "org": "Ravensburg Weingarten University, Weingarten",
         "d0": "Specialization: Robotics & Smart Devices",
-        "d1": "Current GPA: 2.4 (German scale)"
+        "d1": "Grade: 2.3 (German scale)"
       },
       "1": {
         "title": "Technical University Entrance Qualification (Technology)",
