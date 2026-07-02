@@ -1,8 +1,8 @@
 import {
   SiC, SiCplusplus, SiOpenjdk, SiPython, SiDotnet, SiJavascript,
-  SiPhp, SiHtml5, SiCss3, SiMysql, SiReact, SiVuedotjs, SiNodedotjs,
+  SiPhp, SiHtml5, SiCss, SiMysql, SiReact, SiVuedotjs, SiNodedotjs,
   SiRos, SiDocker, SiKubernetes, SiJenkins, SiGithubactions,
-  SiGit, SiCmake, SiJira, SiOracle, SiClion, SiIntellijidea,
+  SiGit, SiCmake, SiJira, SiClion, SiIntellijidea,
   SiPycharm, SiAndroidstudio,
 } from 'react-icons/si'
 import {
@@ -25,7 +25,7 @@ const GROUPS = [
       { name: 'SQL',         Icon: SiMysql,          color: '#4479A1', level: 3 },
       { name: 'PHP',         Icon: SiPhp,            color: '#777BB4', level: 2 },
       { name: 'HTML',        Icon: SiHtml5,          color: '#E34F26', level: 2 },
-      { name: 'CSS',         Icon: SiCss3,           color: '#1572B6', level: 2 },
+      { name: 'CSS',         Icon: SiCss,            color: '#1572B6', level: 2 },
       { name: 'Assembler',   Icon: FiCpu,            color: '#6B7280', level: 1 },
     ],
   },
@@ -71,7 +71,7 @@ const GROUPS = [
     labelKey: 'technologies.groups.databases',
     GroupIcon: FiDatabase,
     skills: [
-      { name: 'Oracle SQL', Icon: SiOracle, color: '#F80000', level: 2 },
+      { name: 'Oracle SQL', Icon: FiDatabase, color: '#F80000', level: 2 },
       { name: 'MySQL',      Icon: SiMysql,  color: '#4479A1', level: 2 },
     ],
   },
