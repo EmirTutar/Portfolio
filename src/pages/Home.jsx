@@ -101,7 +101,8 @@ export default function Home() {
                 <div className="orbit-node-at" style={{ transform: 'rotate(270deg)' }}><span className="orbit-node" /></div>
               </div>
               <div className="avatar-circle">
-                <span className="avatar-initials">ET</span>
+                <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Emircan Tutar" className="avatar-photo" />
+                <div className="avatar-shine" />
               </div>
             </div>
             <TypedBadge />
