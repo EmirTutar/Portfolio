@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import {
-  FiBriefcase, FiBook, FiArrowDown, FiGithub, FiArrowRight,
+  FiBriefcase, FiBook, FiArrowDown, FiGithub, FiArrowRight, FiCalendar, FiClock,
 } from 'react-icons/fi'
 import timeline from '../data/timeline'
 import projects from '../data/projects'
+import { blogPosts } from '../data/blog'
+import { formatDate } from '../utils/formatDate'
 import Reveal from '../components/Reveal'
 
 /* ─── typed effect ────────────────────────────────────────────── */
@@ -243,6 +245,43 @@ export default function Home() {
           <Reveal delay={200}>
             <Link to="/projects" className="btn btn--ghost" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
               {t('home.all_projects')} <FiArrowRight style={{ marginLeft: '0.4rem' }} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ════ LATEST BLOG POSTS ══════════════════════════════════ */}
+      <section className="home-section">
+        <div className="container">
+          <Reveal>
+            <h2 className="section-title">{t('home.blog_title')}</h2>
+            <p className="muted" style={{ marginBottom: '2rem' }}>{t('home.blog_sub')}</p>
+          </Reveal>
+
+          <div className="grid grid-2">
+            {blogPosts.slice(0, 2).map((post, i) => (
+              <Reveal key={post.id} delay={i * 100}>
+                <Link to={`/blog/${post.id}`} className="card home-blog-card">
+                  <div className="home-blog-meta">
+                    <span><FiCalendar size={11} /> {formatDate(post.date)}</span>
+                    <span>·</span>
+                    <span><FiClock size={11} /> {post.readTime} {t('blog.min_read')}</span>
+                  </div>
+                  <h3 className="home-blog-title">{post.title}</h3>
+                  <p className="home-blog-excerpt">{post.excerpt}</p>
+                  <div className="home-blog-tags">
+                    {post.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={150}>
+            <Link to="/blog" className="btn btn--ghost" style={{ marginTop: '1.5rem', display: 'inline-flex' }}>
+              {t('home.blog_all')} <FiArrowRight style={{ marginLeft: '0.4rem' }} />
             </Link>
           </Reveal>
         </div>

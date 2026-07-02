@@ -1,5 +1,111 @@
 export const blogPosts = [
   {
+    id: 'building-portfolio-with-claude-code',
+    title: 'Building My Portfolio with Claude Code: What I Actually Learned',
+    date: '2026-07-02',
+    readTime: 8,
+    cover: null,
+    excerpt:
+      'Started by adding a profile picture. Ended up deep inside GitHub Actions, Vite peer conflicts, i18n, and a full Timeline redesign — all with an AI pair programmer in my terminal.',
+    tags: ['claude-code', 'react', 'vite', 'ai-tools', 'github-actions'],
+    content: [
+      {
+        type: 'callout',
+        text: 'Claude Code is Anthropic\'s CLI for Claude — it runs in your terminal, reads your codebase, writes and edits files, runs commands, and commits changes. Think of it as a senior developer sitting next to you who can actually touch the keyboard.',
+      },
+      {
+        type: 'p',
+        text: 'I started using Claude Code for a simple task: add a profile photo to my portfolio\'s home page with some nice animations. What followed over the next few weeks turned into one of the most educational debugging sessions I\'ve had — because things kept breaking in ways I didn\'t expect.',
+      },
+      { type: 'h2', text: 'The Profile Picture That Started Everything' },
+      {
+        type: 'p',
+        text: 'The home page had a placeholder "ET" initials circle. I wanted a real photo with a floating animation and a shine effect on hover. Claude Code read the existing CSS, matched the design system (dark theme, green accent), and added three keyframe animations: avatar-enter (scale in on load), avatar-float (gentle up/down loop), and avatar-shine (a diagonal light sweep on hover).',
+      },
+      {
+        type: 'p',
+        text: 'The photo itself was tricky. Copying a file from a local path into the repo, setting the correct asset path using import.meta.env.BASE_URL for GitHub Pages — these are the kinds of environment-specific details that trip up copy-pasted tutorials. Claude Code got both right on the first attempt because it had already read the Vite config and the existing deploy workflow.',
+      },
+      { type: 'h2', text: 'First Crisis: Deployments Started Hanging' },
+      {
+        type: 'p',
+        text: 'The moment I pushed the profile picture, GitHub Pages deployments that previously finished in ~1 minute started hanging for 10–11 minutes before timing out. I shared a screenshot of the Actions run history. The times told the story instantly.',
+      },
+      {
+        type: 'callout',
+        text: 'Root cause: the workflow had concurrency.cancel-in-progress: true. When two pushes happened quickly (common during active dev), the first deployment got cancelled mid-way — leaving GitHub Pages in a locked "syncing" state. The next run then had to wait for that lock to expire.',
+      },
+      {
+        type: 'p',
+        text: 'The fix was straightforward once diagnosed: set cancel-in-progress: false and add timeout-minutes: 10 so stuck deployments auto-abort instead of hanging forever. What made this hard to spot was that the bug only appeared under rapid-push conditions, not in normal single-commit deploys.',
+      },
+      { type: 'h2', text: 'Dependabot: Helpful Until It Breaks Your Build' },
+      {
+        type: 'p',
+        text: 'I asked Claude Code to set up Dependabot for automated dependency updates. Simple enough — a .github/dependabot.yml with weekly npm and github-actions checks. Then I merged the first batch of Dependabot PRs without thinking.',
+      },
+      {
+        type: 'p',
+        text: 'The build immediately broke. Dependabot had jumped Vite from version 5 directly to 8, skipping v7 entirely. The problem: @vitejs/plugin-react at the installed version only declared peer support for Vite up to 7. npm refused to install.',
+      },
+      {
+        type: 'code',
+        text: 'npm error ERESOLVE unable to resolve dependency tree\n\nnpm error Found: vite@8.1.3\nnpm error node_modules/vite\nnpm error   dev vite@"^8.1.3" from the root project\n\nnpm error Could not resolve dependency:\nnpm error   peer vite@"^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0" from @vitejs/plugin-react@5.0.4',
+      },
+      {
+        type: 'p',
+        text: 'Fix: update @vitejs/plugin-react to its latest version which added Vite 8 support. But at the same time, react-icons had quietly renamed and removed some Simple Icons exports — SiCss3 became SiCss, and SiOracle was removed entirely. The build now failed for a second, unrelated reason. One Dependabot batch, two breaks.',
+      },
+      {
+        type: 'callout',
+        text: 'Lesson: never merge major-version Dependabot PRs without checking the changelog. And always run the local build before pushing — the CI failure told me what was wrong, but a 30-second npm run build would have caught it first.',
+      },
+      { type: 'h2', text: 'Redesigning the Timeline Page' },
+      {
+        type: 'p',
+        text: 'The /timeline page was a plain card grid — functional but boring. I asked for a proper vertical timeline with filter tabs, tech tags per job, icons, and scroll animations. This was the most complex UI task of the whole project.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Vertical track with a gradient green line and dot nodes per entry',
+          'Filter tabs (All / Work Experience / Education) styled as a segmented control',
+          'Tech tag chips under each work entry (Docker, Robot Framework, eCAL, etc.)',
+          'FiBriefcase / FiBook icons on each dot node and section header',
+          'Reveal component for staggered scroll animations with per-entry delays',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Claude Code wrote the component, new CSS classes (ftl-*), and updated all three locale files (DE/EN/TR) simultaneously. I checked each file before committing. The translations matched, the CSS matched the design system, and the filter state logic worked on first render.',
+      },
+      { type: 'h2', text: 'What Working With Claude Code Actually Feels Like' },
+      {
+        type: 'p',
+        text: 'The biggest surprise was context retention. Claude Code reads the codebase at the start and keeps that context across tool calls — so when I said "the period for ZF should include 05/2026–08/2026," it knew where in the data file to look and which translation keys to update across all three locale files without me specifying.',
+      },
+      {
+        type: 'p',
+        text: 'It also made mistakes I had to catch. Early on it added itself as a git co-author, which I did not want. It suggested using raw GitHub URLs for assets when the proper approach was import.meta.env.BASE_URL. And once it used a destructive git reset without asking first. These are real problems — AI tooling requires supervision, not trust.',
+      },
+      { type: 'h2', text: 'What I\'d Tell Someone Starting Out' },
+      {
+        type: 'ul',
+        items: [
+          'Run npm run build locally before pushing — CI tells you what\'s wrong, but local is faster.',
+          'Read Dependabot PRs before merging. Major version bumps need a changelog check.',
+          'Keep commits small and descriptive so git history stays useful as context.',
+          'Don\'t approve actions you don\'t understand just because the AI suggested them.',
+          'Use it for the tedious parts — updating translations across 3 locale files, writing CSS for a design system you\'ve already defined, setting up CI steps you\'ve done before.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The portfolio is now significantly better than it was three months ago — more polished UI, proper deployment stability, multilingual content, and a well-structured codebase. Claude Code was the tool that made that pace possible. But every meaningful decision still went through me.',
+      },
+    ],
+  },
+  {
     id: 'bachelor-thesis-ecal',
     title: 'Automating IPC Middleware Tests: My Bachelor Thesis at Continental',
     date: '2025-05-10',

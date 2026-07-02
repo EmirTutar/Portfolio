@@ -25,6 +25,9 @@
     "timeline_sub": "A chronological overview of my work experience and education.",
     "timeline_full": "Full Timeline",
     "all_projects": "All Projects",
+    "blog_title": "Latest from the Blog",
+    "blog_sub": "Writing about software, tools, and what I'm learning.",
+    "blog_all": "All Posts",
     "stats": {
       "projects": "Projects",
       "internships": "Internships",

@@ -25,6 +25,9 @@
     "timeline_sub": "Ein chronologischer Überblick über meine Berufserfahrung und Ausbildung.",
     "timeline_full": "Vollständiger Zeitstrahl",
     "all_projects": "Alle Projekte",
+    "blog_title": "Neueste Blog-Beiträge",
+    "blog_sub": "Ich schreibe über Software, Tools und was ich gerade lerne.",
+    "blog_all": "Alle Beiträge",
     "stats": {
       "projects": "Projekte",
       "internships": "Praktika",
