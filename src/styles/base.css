@@ -1,0 +1,64 @@
+/* =========================
+   Theme Variables & Reset
+   ========================= */
+
+:root {
+  --bg: #0b0e14;
+  --card: rgba(13, 17, 28, 0.85);
+  --elev: #111827;
+  --border: rgba(255, 255, 255, 0.06);
+  --primary: #13b276;
+  --primary-soft: rgba(19, 178, 118, 0.12);
+  --accent: #f59e0b;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --sidebar-w: 64px;
+  --sidebar-w-open: 220px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 65% 55% at 18% -8%, rgba(19, 178, 118, 0.11) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 110%, rgba(245, 158, 11, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 2px 2px at 35% 40%, rgba(19, 178, 118, 0.04) 0%, transparent 50%);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: #6ee7b7; text-decoration: none; }
+
+.text-center { text-align: center; }
+.mt-lg       { margin-top: 2rem; }

@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { blogPosts } from '../data/blog'
-
-function formatDate(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
+import { formatDate } from '../utils/formatDate'
 
 export default function Blog() {
   const { t } = useTranslation()

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { FiArrowUpRight } from 'react-icons/fi'
 import projects from '../data/projects'
+import { categoryLabel } from '../utils/categoryLabel'
 
 const ALL_TECHS = [...new Set(projects.flatMap(p => p.technologies))].sort()
 
@@ -23,13 +24,6 @@ export default function Projects() {
   const catBtn = (key) =>
     `btn btn--ghost${catFilter === key ? ' btn--active' : ''}`
 
-  const categoryLabel = (cat) => {
-    if (cat === 'work')    return t('projects.category_work')
-    if (cat === 'study')   return t('projects.category_study')
-    if (cat === 'private') return t('projects.category_private')
-    return ''
-  }
-
   return (
     <section>
       <h1 className="section-title">{t('projects.title')}</h1>
@@ -37,7 +31,7 @@ export default function Projects() {
         {t('projects.subtitle')}
       </p>
 
-      {/* ── category filter ── */}
+      {/* category filter */}
       <div className="toolbar" style={{ marginBottom: '1rem' }}>
         {['all', 'work', 'study', 'private'].map(key => (
           <button key={key} type="button" className={catBtn(key)} onClick={() => setCatFilter(key)}>
@@ -46,7 +40,7 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* ── technology chip filter ── */}
+      {/* technology chip filter */}
       <div className="tech-chip-bar" style={{ marginBottom: '1.75rem' }}>
         <button
           type="button"
@@ -67,8 +61,8 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* ── project grid ── */}
-      <div className="grid grid-2 grid-projects">
+      {/* project grid */}
+      <div className="grid grid-2">
         {filtered.map((project, idx) => (
           <Link
             key={`${catFilter}-${techFilter ?? 'all'}-${project.id}`}
@@ -76,7 +70,6 @@ export default function Projects() {
             className="card project-card project-card--anim"
             style={{ animationDelay: `${idx * 55}ms` }}
           >
-            {/* title row */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.45rem' }}>
               <h2 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, lineHeight: 1.35 }}>
                 {t(project.titleKey)}
@@ -86,26 +79,20 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* category badge */}
             <span
               className={`home-proj-badge home-proj-badge--${project.category}`}
               style={{ display: 'inline-block', marginBottom: '0.6rem' }}
             >
-              {categoryLabel(project.category)}
+              {categoryLabel(project.category, t)}
             </span>
 
-            {/* description */}
             <p className="muted" style={{ marginBottom: '0.85rem', fontSize: '0.875rem', lineHeight: 1.6, marginTop: 0 }}>
               {t(project.descriptionKey)}
             </p>
 
-            {/* tech tags */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem', marginTop: 'auto' }}>
               {project.technologies?.slice(0, 5).map(tech => (
-                <span
-                  key={tech}
-                  className={`tag${techFilter === tech ? ' tag--active' : ''}`}
-                >
+                <span key={tech} className={`tag${techFilter === tech ? ' tag--active' : ''}`}>
                   {tech}
                 </span>
               ))}

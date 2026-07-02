@@ -4,6 +4,7 @@ const projects = [
     titleKey: "projects.data.ecal_test_suite.title",
     descriptionKey: "projects.data.ecal_test_suite.description",
     category: "work",
+    featured: true,
     Effort: 5,
     technologies: ["C++", "Python", "Docker", "Robot Framework", "eCAL", "GitHub Actions", "GitHub Pages", "LaTeX"],
     links: {
@@ -28,6 +29,7 @@ const projects = [
     titleKey: "projects.data.rateme.title",
     descriptionKey: "projects.data.rateme.description",
     category: "study",
+    featured: true,
     Effort: 4,
     technologies: ["Android", "Java", "Firebase Auth", "Firestore", "REST-API"],
     links: {
@@ -64,6 +66,7 @@ const projects = [
     titleKey: "projects.data.patient_monitoring.title",
     descriptionKey: "projects.data.patient_monitoring.description",
     category: "study",
+    featured: true,
     Effort: 5,
     technologies: ["Docker", "Raspberry Pi", "YOLOv5", "MQTT", "Matrix", "Python"],
     links: {

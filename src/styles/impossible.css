@@ -1,0 +1,107 @@
+/* =========================
+   Impossible List
+   ========================= */
+
+.impossible-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 480px;
+  padding: 1rem 1.25rem;
+}
+
+.impossible-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.impossible-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.impossible-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #13b276, #f59e0b);
+  border-radius: 999px;
+  transition: width 600ms ease;
+}
+
+.impossible-categories {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 0 3rem;
+}
+
+@media (min-width: 768px) {
+  .impossible-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.impossible-category {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.impossible-cat-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.impossible-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.impossible-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.impossible-item--done {
+  color: var(--muted);
+}
+
+.impossible-item--done .impossible-item-text {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.impossible-checkbox {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  background: rgba(255, 255, 255, 0.02);
+  color: transparent;
+}
+
+.impossible-checkbox--done {
+  background: rgba(19, 178, 118, 0.15);
+  border-color: rgba(19, 178, 118, 0.5);
+  color: #13b276;
+}

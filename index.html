@@ -10,26 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
     <style>
-      :root {
-        --bg: #0b0e14;
-        --card: rgba(15, 19, 32, 0.85);
-        --elev: #111827;
-        --border: rgba(255, 255, 255, 0.07);
-        --primary: #10b981;
-        --primary-soft: rgba(16, 185, 129, 0.12);
-        --accent: #f59e0b;
-        --text: #e2e8f0;
-        --muted: #64748b;
-      }
-      html, body, #root { height: 100%; }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
-      }
-      a { color: var(--primary); text-decoration: none; }
-      a:hover { text-decoration: none; }
+      /* Prevent white flash before CSS loads */
+      html, body { background: #0b0e14; }
     </style>
   </head>
   <body>

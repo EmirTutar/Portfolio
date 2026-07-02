@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
-  FiArrowLeft, FiGithub, FiExternalLink, FiBookOpen,
-  FiZap, FiCheckSquare, FiCode, FiServer, FiDatabase, FiCloud, FiSmartphone,
-  FiNavigation, FiShield, FiGlobe, FiActivity, FiCamera, FiCpu, FiBell,
-  FiPackage, FiTarget, FiUsers, FiLayers, FiBookOpen as FiDoc, FiAlertTriangle,
-  FiTool, FiBarChart2, FiMonitor, FiPlay, FiLock, FiRadio, FiBox
+  FiArrowLeft, FiGithub, FiExternalLink, FiBookOpen as FiDoc,
+  FiZap, FiCheckSquare, FiCode, FiServer, FiCloud, FiSmartphone,
+  FiNavigation, FiShield, FiGlobe, FiActivity, FiCamera,
+  FiBell, FiTarget, FiUsers, FiLayers, FiBarChart2,
+  FiMonitor, FiPlay, FiLock, FiBox,
 } from 'react-icons/fi'
 import projects from '../data/projects'
+import { categoryLabel } from '../utils/categoryLabel'
 
 // ── Shared helpers ──────────────────────────────────────────────────────────
 
@@ -36,13 +37,12 @@ function ZoomableImage({ src, alt, caption }) {
 }
 
 function PdHero({ project, subtitle, links = [], t }) {
-  const catLabel = project.category === 'work' ? t('projects.category_work')
-    : project.category === 'study' ? t('projects.category_study')
-    : t('projects.category_private')
   return (
     <div className="pd-hero card pd-animate">
       <div className="pd-hero-meta">
-        <span className={`home-proj-badge home-proj-badge--${project.category}`}>{catLabel}</span>
+        <span className={`home-proj-badge home-proj-badge--${project.category}`}>
+          {categoryLabel(project.category, t)}
+        </span>
       </div>
       <h1 className="pd-hero-title">{t(project.titleKey)}</h1>
       <p className="pd-hero-sub muted">{subtitle}</p>
@@ -80,7 +80,7 @@ function PdSectionH({ children }) {
 function PdBack({ t }) {
   return (
     <Link to="/projects" className="pd-link-btn" style={{ alignSelf: 'flex-start', marginBottom: '0.25rem' }}>
-      <FiArrowLeft size={14} /> Back to Projects
+      <FiArrowLeft size={14} /> {t('projects.back_link')}
     </Link>
   )
 }
@@ -116,7 +116,7 @@ export default function ProjectDetail() {
           subtitle="Docker and Robot Framework integration tests for the open-source eCAL IPC middleware — covering Pub/Sub, RPC, crash and network failure scenarios with CI/CD automation."
           links={[
             { label: 'GitHub', url: project.links.github, Icon: FiGithub },
-            { label: 'View Thesis', url: `${base}ecal-tests/bachelor-thesis-ipc-testing.pdf`, Icon: FiBookOpen, primary: true },
+            { label: 'View Thesis', url: `${base}ecal-tests/bachelor-thesis-ipc-testing.pdf`, Icon: FiDoc, primary: true },
           ]}
           t={t}
         />
@@ -592,7 +592,7 @@ export default function ProjectDetail() {
           subtitle="Academic research project evaluating ChatGPT-4 as a Java test-generation assistant — measuring code coverage, error rates and prompt effort across unit, integration and UI test types."
           links={[
             { label: 'GitHub', url: project.links.github, Icon: FiGithub },
-            { label: 'View Report', url: `${base}java-testing/ChatGPT_Testing_Java.pdf`, Icon: FiBookOpen, primary: true },
+            { label: 'View Report', url: `${base}java-testing/ChatGPT_Testing_Java.pdf`, Icon: FiDoc, primary: true },
           ]}
           t={t}
         />
@@ -789,17 +789,15 @@ export default function ProjectDetail() {
   }
 
   // ── Generic fallback ────────────────────────────────────────────────────────
-  const catLabel = project.category === 'work' ? t('projects.category_work')
-    : project.category === 'study' ? t('projects.category_study')
-    : t('projects.category_private')
-
   return (
     <section className="project-detail">
       <PdBack t={t} />
 
       <div className="pd-hero card pd-animate">
         <div className="pd-hero-meta">
-          <span className={`home-proj-badge home-proj-badge--${project.category}`}>{catLabel}</span>
+          <span className={`home-proj-badge home-proj-badge--${project.category}`}>
+            {categoryLabel(project.category, t)}
+          </span>
         </div>
         <h1 className="pd-hero-title">{t(project.titleKey)}</h1>
         <div className="pd-hero-tags">

@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
-  FiBriefcase, FiBook, FiArrowDown,
-  FiGithub, FiExternalLink, FiArrowRight,
+  FiBriefcase, FiBook, FiArrowDown, FiGithub, FiArrowRight,
 } from 'react-icons/fi'
 import timeline from '../data/timeline'
 import projects from '../data/projects'
-import { useScrollReveal } from '../hooks/useScrollReveal'
+import Reveal from '../components/Reveal'
 
 /* ─── typed effect ────────────────────────────────────────────── */
 const PHRASES = ['Software Developer', 'Problem Solver', 'CS Student', 'Team Player']
@@ -46,20 +45,6 @@ function TypedBadge() {
   )
 }
 
-/* ─── scroll-reveal wrapper ───────────────────────────────────── */
-function Reveal({ children, delay = 0, className = '' }) {
-  const [ref, visible] = useScrollReveal()
-  return (
-    <div
-      ref={ref}
-      className={`reveal${visible ? ' revealed' : ''}${className ? ` ${className}` : ''}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  )
-}
-
 /* ─── timeline helpers ────────────────────────────────────────── */
 function parseStartYYYYMM(period) {
   const m = period.match(/(\d{2})\/(\d{4})/)
@@ -67,14 +52,14 @@ function parseStartYYYYMM(period) {
 }
 
 function buildTimelineEntries(t) {
-  const exp = timeline.experience.map((e, i) => ({
+  const exp = timeline.experience.map((e) => ({
     ...e,
     type: 'work',
     sortKey: parseStartYYYYMM(e.period),
     title: t(e.titleKey),
     org: t(e.orgKey),
   }))
-  const edu = timeline.education.map((e, i) => ({
+  const edu = timeline.education.map((e) => ({
     ...e,
     type: 'edu',
     sortKey: parseStartYYYYMM(e.period),
@@ -84,9 +69,7 @@ function buildTimelineEntries(t) {
   return [...exp, ...edu].sort((a, b) => b.sortKey - a.sortKey)
 }
 
-/* ─── featured projects (top 3 by effort) ────────────────────── */
-const FEATURED_IDS = ['ecal-test-suite', 'rateme', 'patient-monitoring']
-const featuredProjects = projects.filter((p) => FEATURED_IDS.includes(p.id))
+const featuredProjects = projects.filter((p) => p.featured)
 
 /* ─── component ──────────────────────────────────────────────── */
 export default function Home() {
@@ -146,7 +129,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll hint */}
         <a href="#timeline" className="scroll-hint" aria-label="Scroll down">
           <FiArrowDown size={18} />
         </a>

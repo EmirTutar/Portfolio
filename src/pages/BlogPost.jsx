@@ -1,35 +1,18 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { blogPosts } from '../data/blog'
-
-function formatDate(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
+import { formatDate } from '../utils/formatDate'
 
 function renderBlock(block, i) {
   switch (block.type) {
     case 'h2':
-      return (
-        <h2 key={i} className="blog-post-h2">
-          {block.text}
-        </h2>
-      )
+      return <h2 key={i} className="blog-post-h2">{block.text}</h2>
     case 'p':
-      return (
-        <p key={i} className="blog-post-p">
-          {block.text}
-        </p>
-      )
+      return <p key={i} className="blog-post-p">{block.text}</p>
     case 'ul':
       return (
         <ul key={i} className="blog-post-ul">
-          {block.items.map((item, j) => (
-            <li key={j}>{item}</li>
-          ))}
+          {block.items.map((item, j) => <li key={j}>{item}</li>)}
         </ul>
       )
     default:
