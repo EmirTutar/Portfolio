@@ -1,4 +1,275 @@
+// Assets live in /public and are served under the Vite base path
+// (see vite.config.js -> base: '/Portfolio/'), same convention as ProjectDetail.
+const base = import.meta.env.BASE_URL || '/'
+
 export const blogPosts = [
+  {
+    id: 'building-flow-sprint-tool',
+    title: 'Flow: Building My Own Sprint Management Tool',
+    date: '2026-07-29',
+    readTime: 9,
+    cover: null,
+    excerpt:
+      'Why I am building yet another Jira alternative, the one architectural rule that shaped the entire codebase, and what turned out to be genuinely hard about it.',
+    tags: ['startup', 'nextjs', 'firebase', 'typescript', 'product'],
+    content: [
+      {
+        type: 'p',
+        text: 'TutarTechs Flow is a sprint and backlog management tool — the category Jira and Linear live in. I am building it as a solo project, currently at MVP stage: one admin user (me), no signup, no payments, no email. The point right now is not to have customers. The point is to have a real product with real constraints that I have to make decisions about.',
+      },
+      { type: 'h2', text: 'What Flow Actually Is' },
+      {
+        type: 'ul',
+        items: [
+          'Projects with a Kanban board, a backlog, and sprints',
+          'Backlog items with type, priority, story points, labels, and acceptance criteria',
+          'Sprint planning with capacity, plus burndown and velocity charts',
+          'An AI layer: a backlog generator, a task-to-prompt generator, a GitHub coding assistant, and AI analysis',
+        ],
+      },
+      {
+        type: 'image',
+        src: `${base}flow/workspace.png`,
+        alt: 'Flow workspace overview showing two projects',
+        caption: 'The workspace view. Deliberately plain — the interesting parts are one level down.',
+      },
+      { type: 'h2', text: 'Why Build Another One of These' },
+      {
+        type: 'p',
+        text: 'The honest answer: because I wanted a project where I could not hide behind a tutorial. A todo app has no access control problems. A CRUD demo has no multi-tenancy. A sprint tool has both, plus a data model that gets genuinely awkward once you add sprints, ordering, and per-project item numbering.',
+      },
+      {
+        type: 'p',
+        text: 'The second reason is the AI layer. I did not want AI features bolted onto a finished product as a demo. I wanted them designed into the data model and the security model from the start, because that is where the actual difficulty lives — not in calling an API.',
+      },
+      { type: 'h2', text: 'The Stack' },
+      {
+        type: 'ul',
+        items: [
+          'Next.js 16 with the App Router, React 19, TypeScript, Tailwind',
+          'Firebase Firestore (europe-west3) for data, Firebase Auth for email/password login',
+          'Google Gemini behind a provider abstraction layer, so the model is swappable',
+          'Vercel for hosting, Vitest and the Firestore emulator for tests',
+        ],
+      },
+      { type: 'h2', text: 'The One Rule That Shaped Everything' },
+      {
+        type: 'p',
+        text: 'Early on I made a decision that turned out to influence every feature since: the client has zero write access to the database. Not "restricted" write access — zero. The Firestore security rules deny all writes outright. Every mutation goes through a Next.js Server Action that runs on the server with the Admin SDK.',
+      },
+      {
+        type: 'callout',
+        text: 'Every write path in the app follows the same four steps in the same order: requireUser() to get the authenticated session, zod to validate the input, assertMembership() to check the user actually belongs to that workspace with a sufficient role, and only then the Firestore write. A new write path that skips any of these is treated as a critical bug, not a style issue.',
+      },
+      {
+        type: 'code',
+        text: 'export async function createItem(input: CreateItemInput): Promise<ActionResult> {\n  const user = await requireUser()                       // 1. authenticated?\n\n  const parsed = createItemSchema.safeParse(input)       // 2. valid shape?\n  if (!parsed.success) return { ok: false, error: INVALID_INPUT }\n\n  await assertMembership(user.uid, workspaceId, ROLES)   // 3. allowed?\n\n  // 4. only now does anything get written\n}',
+      },
+      {
+        type: 'p',
+        text: 'The cost is that nothing is optimistic and every mutation is a round trip. The benefit is that there is exactly one place where authorization can go wrong, and it looks identical in every file. When I later added AI features that write to the database, I did not have to invent a new security story — the AI path is just another caller of the same chain.',
+      },
+      { type: 'h2', text: 'The Backlog View' },
+      {
+        type: 'image',
+        src: `${base}flow/backlog.png`,
+        alt: 'Flow backlog view with items and a sprint panel',
+        caption:
+          'Backlog on the left, sprints on the right. Every item here was generated by the AI feature and then reviewed by me before being created.',
+      },
+      { type: 'h2', text: 'What Was Actually Hard' },
+      {
+        type: 'p',
+        text: 'Not the UI. The three things that consistently cost me the most time were ordering, security rules, and scope.',
+      },
+      {
+        type: 'p',
+        text: 'Ordering: drag-and-drop reordering seems trivial until you realize renumbering every item on every drag is both slow and race-prone. The fix is fractional ranking — each item gets a string rank, and inserting between two items means computing a string that sorts between them. It is a known technique (LexoRank), but implementing it correctly, including the edge cases at the very start and end of a list, took real effort.',
+      },
+      {
+        type: 'p',
+        text: 'Security rules: Firestore rules are easy to write and easy to misread. I now treat every rules change as requiring emulator tests with both positive and negative cases — not just "can a member read this?" but "can an outsider add themselves as a member?" That second test must stay red forever, and the only way to know it does is to assert it.',
+      },
+      {
+        type: 'p',
+        text: 'Scope: this is the one I underestimated. Every feature suggests three more. The MVP boundary — single admin, no signup, no payments — is not a limitation I am working around, it is the thing that lets the project finish phases instead of sprawling.',
+      },
+      { type: 'h2', text: 'Where It Stands' },
+      {
+        type: 'p',
+        text: 'Projects, board, backlog, sprints, and analytics are done. The first AI feature — the backlog generator — is working against the live Gemini API. Still ahead: the task-to-prompt generator, the GitHub coding assistant, AI analysis, and then the boring but necessary work of multi-user support, real roles, and eventually billing.',
+      },
+      {
+        type: 'p',
+        text: 'I wrote up what building the AI layer specifically taught me in a separate post — that part had enough surprises to deserve its own.',
+      },
+    ],
+  },
+  {
+    id: 'ai-lessons-from-flow',
+    title: 'What Shipping an AI Feature Actually Taught Me',
+    date: '2026-07-29',
+    readTime: 11,
+    cover: null,
+    excerpt:
+      'Structured output, tool calling, prompt injection, and quota accounting — plus three bugs that a clean build and a green test suite could not catch.',
+    tags: ['ai', 'gemini', 'llm', 'prompt-injection', 'nextjs'],
+    content: [
+      {
+        type: 'p',
+        text: 'The first AI feature in Flow is a backlog generator: you describe a feature in plain language, and it proposes structured backlog items — title, user-story description, acceptance criteria, type, story points. Calling the Gemini API was the easy part and took an afternoon. Everything around it took considerably longer, and that is the part worth writing down.',
+      },
+      { type: 'h2', text: 'Rule One: The AI Never Writes to the Database' },
+      {
+        type: 'p',
+        text: 'The generation step performs no writes at all. It returns suggestions to the browser, where each one is individually editable and can be unchecked. Only when I press the confirm button does a second, completely independent Server Action write anything — and that action validates the incoming suggestions with exactly the same schema as the AI output, because at that point the data is coming from the client and is no more trustworthy than the model was.',
+      },
+      {
+        type: 'image',
+        src: `${base}flow/ai-generating.png`,
+        alt: 'The AI generation dialog in Flow while suggestions are being generated',
+        caption:
+          'Describe what you want. Nothing is created until you review the result and confirm it explicitly.',
+      },
+      { type: 'h2', text: 'Two Calls, Not One' },
+      {
+        type: 'p',
+        text: 'I wanted the model to do two things: look at the existing backlog to avoid duplicates and calibrate story points against past items, and then produce output in a strictly enforced JSON schema. Gemini will not do both in the same request — you can force a response schema, or you can offer function calling, but not both at once.',
+      },
+      {
+        type: 'callout',
+        text: 'So the flow is two stages. Stage one is research: the model gets a findSimilarItems tool and can call it repeatedly to search the existing backlog. Stage two takes that research as input and produces the final items under a forced JSON schema. Two calls minimum, more when the model uses the tool several times.',
+      },
+      {
+        type: 'p',
+        text: 'The tool itself is deliberately narrow. The model supplies exactly one thing: a search string. It cannot pass a project id or a workspace id — that scope is captured in a closure on the server after the membership check has already passed. The model can search. It cannot navigate.',
+      },
+      { type: 'h2', text: 'User Input Is Data, Not Instructions' },
+      {
+        type: 'p',
+        text: 'Anything a user types can contain text aimed at the model. My first defense was to wrap user content in delimiters and strip the closing marker from the input. That is bypassable, and I only realized how easily during review: filtering out ">>>" does nothing about "> > >", and I would have been playing whack-a-mole with variants forever.',
+      },
+      {
+        type: 'p',
+        text: 'The fix that actually holds is a random delimiter generated per request. The model is told that everything between the markers is data. An attacker writing the prompt cannot close a block whose marker they cannot predict.',
+      },
+      {
+        type: 'code',
+        text: 'function newDataMarker(): string {\n  return `DATA-${randomUUID().slice(0, 8)}`\n}\n\nfunction asData(marker: string, label: string, value: string): string {\n  return `${label}:\\n<<<${marker}\\n${value}\\n${marker}>>>`\n}',
+      },
+      {
+        type: 'p',
+        text: 'The second half of that problem is what you send at all. Everything that reaches the prompt goes through a single function with an explicit field allow-list — project name, description, item title, type, story points. Never a spread of the document. A test with a deliberately polluted fixture fails the moment someone replaces that list with a spread, which is exactly the kind of change that looks harmless in a diff.',
+      },
+      { type: 'h2', text: 'Paying For What You Actually Use' },
+      {
+        type: 'p',
+        text: 'Rate limiting sounds like a small feature. It was the single buggiest part of the project, and I got it wrong three times in a row.',
+      },
+      {
+        type: 'p',
+        text: 'The design is reserve-then-settle: before the first API call, reserve the expected number of requests in a transactional daily counter; afterwards, book the difference between what was reserved and what was actually spent. Version one reserved two requests but the tool loop could make up to five real calls — so the daily limit could be exceeded by design. Version two tried to reconstruct the real count from return values, which silently lost every call made by a stage that then threw an exception. Version three counted correctly but could double-book on the success path when the logging write failed after the settlement had already committed.',
+      },
+      {
+        type: 'callout',
+        text: 'What finally worked: count each request at the moment it goes out, via a callback fired immediately before the network call — not derived from what came back. Every path, success or failure, then settles exactly once through a single guarded function.',
+      },
+      {
+        type: 'p',
+        text: 'In the live test the successful run made five real calls against two reserved, booked the difference of three, and the daily counter matched to the request. All three of those bugs were found by review, not by tests — because they lived in exactly the wiring that no test covered. That was its own lesson: I had decided to skip a test for that layer as "just plumbing".',
+      },
+      { type: 'h2', text: 'Three Things a Green Build Did Not Catch' },
+      {
+        type: 'p',
+        text: 'The first live run against the real API was where the interesting failures showed up. Lint passed, TypeScript passed, 143 tests passed, the production build succeeded. None of that helped.',
+      },
+      {
+        type: 'p',
+        text: 'One: a re-exported type in a Server Action file. Next.js generates a runtime reference for every export of a "use server" module, and a re-exported type does not survive TypeScript\'s type erasure in that form. The module died on load with ReferenceError before any action could run. The build had no complaints whatsoever.',
+      },
+      {
+        type: 'p',
+        text: 'Two: the model I had planned the entire feature around no longer existed for new API users. It still appeared in the ListModels response — that endpoint tells you which models exist, not which ones your key may call. The actual answer only comes from making a request.',
+      },
+      {
+        type: 'code',
+        text: '{\n  "error": {\n    "code": 404,\n    "message": "This model models/gemini-2.5-flash is no longer available to new users.",\n    "status": "NOT_FOUND"\n  }\n}',
+      },
+      {
+        type: 'p',
+        text: 'Three, and my favorite: Gemini 3 models attach an opaque "thought signature" to their function-call responses and require it back when you send the conversation history. My tool loop rebuilt the model\'s message from the parsed function calls — and the signature sits on the message part, one level above the function call, so rebuilding dropped it. The first round worked, the second round failed every single time with a 400.',
+      },
+      {
+        type: 'code',
+        text: 'Function call is missing a thought_signature in functionCall parts.\nThis is required for tools to work correctly.',
+      },
+      {
+        type: 'p',
+        text: 'The fix is to stop being clever: mirror the model\'s response back verbatim instead of reconstructing it from the parts you happen to care about.',
+      },
+      { type: 'h2', text: 'Errors Are Part of the Feature' },
+      {
+        type: 'p',
+        text: 'Third-party AI APIs fail in ways your own database does not. During one screenshot session the API returned server-overload errors for several minutes straight, and one run exceeded the aggregate timeout mid-tool-loop. That is not an edge case, that is a Tuesday.',
+      },
+      {
+        type: 'image',
+        src: `${base}flow/ai-error.png`,
+        alt: 'Flow showing a friendly error message when the AI provider is overloaded',
+        caption:
+          'A real overload response from the provider. The user gets a plain sentence; the stack trace and provider detail stay on the server.',
+      },
+      {
+        type: 'p',
+        text: 'Every provider error is mapped to a fixed allow-list of user-facing messages. The raw error never reaches the browser — it could contain internals or, in the worst case, fragments of the request. There is also a total deadline for the whole operation, not just per call: with up to five research calls plus a draft plus a retry, per-call timeouts alone can add up to far more than the serverless function is allowed to live, and being killed by the platform skips all your error handling.',
+      },
+      { type: 'h2', text: 'What the Output Actually Looks Like' },
+      {
+        type: 'image',
+        src: `${base}flow/item-detail.png`,
+        alt: 'A generated backlog item with editable acceptance criteria',
+        caption:
+          'A generated item after acceptance. The user-story description and all acceptance criteria came from the model — and every one of them stays editable.',
+      },
+      {
+        type: 'p',
+        text: 'The quality genuinely surprised me. Given a two-sentence description of a password reset feature, it produced separate items for requesting the link and setting the new password, wrote acceptance criteria that included token expiry, and — without being asked — proposed a neutral confirmation message that does not reveal whether an account exists. That last one is a real security consideration in password reset flows.',
+      },
+      {
+        type: 'p',
+        text: 'It also proposed a separate item for the rate limit I had mentioned in passing. I unchecked that one, purely to confirm that unchecked suggestions really are not created. They are not.',
+      },
+      { type: 'h2', text: 'What I Would Tell Someone Adding AI to Their Product' },
+      {
+        type: 'ul',
+        items: [
+          'Never let model output write anything directly. Generate, show, let a human confirm, then write through a separate path that validates again.',
+          'Put the provider behind your own interface. Mine has three methods and one adapter; swapping the model was a one-line change to a constant.',
+          'Decide explicitly what data reaches the prompt, in one function, with an allow-list. Never a spread.',
+          'Treat user text as data with an unguessable delimiter, not with filtering. Filtering is a game you lose slowly.',
+          'Count API spend at the moment you spend it, not from what the call returns.',
+          'Test against the real API before you believe anything. A clean build proved nothing here three separate times.',
+        ],
+      },
+      { type: 'h2', text: 'What Is Next' },
+      {
+        type: 'p',
+        text: 'The backlog generator was deliberately the first AI feature, because everything it needed — the provider layer, usage accounting, prompt safety, structured output — is shared infrastructure. Three more features are planned on top of it.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Task-to-prompt: turn a backlog item into a well-formed prompt for a coding assistant, with the project context already filled in.',
+          'GitHub coding assistant: pick an item, let the AI implement it, and get a branch and a pull request back. Never a direct push, never an automatic merge — the diff is always reviewed by a human.',
+          'AI analysis: sprint reports and velocity commentary in plain language, on top of the burndown and velocity data that already exists.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The GitHub assistant is the one I am most cautious about, because it is the first feature where a mistake touches real code in a real repository rather than a suggestion in a dialog. The same rule applies, just with higher stakes: generated code is a diff for review, never something that runs on its own.',
+      },
+    ],
+  },
   {
     id: 'building-portfolio-with-claude-code',
     title: 'Building My Portfolio with Claude Code: What I Actually Learned',
